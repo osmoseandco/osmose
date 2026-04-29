@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-surface-variant": "#3d4a40", outline: "#6d7a6f", "tertiary-container": "#9fa0a0", "surface-container": "#eeeeee", "surface-bright": "#f9f9f9", "primary-fixed-dim": "#5cde97", "on-secondary-container": "#636262", "tertiary-fixed": "#e2e2e2", secondary: "#5f5e5e", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#474746", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "inverse-on-surface": "#f1f1f1", "on-surface": "#1a1c1c", "secondary-fixed": "#e5e2e1", "inverse-surface": "#2f3131", "surface-variant": "#e2e2e2", "surface-tint": "#006d40", "primary-fixed": "#7afbb1", "on-error": "#ffffff", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "surface-container-low": "#f3f3f3", "secondary-fixed-dim": "#c8c6c5", "error-container": "#ffdad6", "on-primary-fixed": "#002110", "inverse-primary": "#5cde97", error: "#ba1a1a", "surface-container-high": "#e8e8e8", "primary-container": "#2bb673", primary: "#006d40", "on-primary-container": "#004024", surface: "#f9f9f9", "secondary-container": "#e2dfde", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#454747", "on-tertiary-container": "#353738", "surface-dim": "#dadada", "on-secondary-fixed": "#1b1b1c", background: "#f9f9f9", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-background": "#1a1c1c", "on-primary-fixed-variant": "#00522f", "outline-variant": "#bccabd", "on-error-container": "#93000a"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "16px", lg: "24px", "margin-mobile": "20px", xl: "32px", sm: "12px", "margin-desktop": "40px", gutter: "16px", xs: "4px", base: "8px"}, fontFamily: {caption: ["Inter"], "body-md": ["Inter"], h3: ["Inter"], h2: ["Inter"], h1: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        body {
+            background-color: #F5F5F5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] font-['Inter'] antialiased">
+<div class="flex justify-center items-center h-16 px-5 w-full">
+<span class="text-xl font-bold tracking-tight text-[#2BB673]">ZenithHealth</span>
+</div>
+</nav>
+<main class="min-h-screen pt-16 flex items-center justify-center relative overflow-hidden">
+<!-- Abstract Background Elements -->
+<div class="absolute top-0 left-0 w-full h-full -z-10 opacity-30">
+<div class="absolute top-[10%] left-[5%] w-96 h-96 bg-primary-container rounded-full blur-[120px] opacity-20"></div>
+<div class="absolute bottom-[10%] right-[5%] w-96 h-96 bg-[#2BB673] rounded-full blur-[120px] opacity-15"></div>
+</div>
+<div class="max-w-6xl w-full px-margin-mobile md:px-margin-desktop py-xl">
+<!-- Hero Header -->
+<div class="text-center mb-xl">
+<h1 class="font-h1 text-h1 text-on-surface mb-md">Bienvenue sur ZenithHealth</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto">Choisissez votre parcours pour une expérience personnalisée dédiée au bien-être et à la performance.</p>
+</div>
+<!-- Role Selection Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg lg:gap-xl">
+<!-- Path 1: Utilisateur -->
+<div class="group relative flex flex-col glass-card border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_30px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer">
+<div class="aspect-video w-full overflow-hidden">
+<img alt="Utilisateur" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="peaceful woman practicing yoga in a bright modern studio with large windows and soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD31xDBbEoU2CztSYBbNjyo8YMZ0CdoQoGLcxb7k4Gj3ssJc6tbe7HO3BOUyvhog0-SunONU23hrUGBzCVN0EHMYRFLFxRHyM_hPByWp30tlW6H1KNxd3Fe60MvwKsMO1X6llDJAFFH-BQDL3hSP5_SgGCGlPH8F9K8vst7VNjn7W6cQ2BHk8uNJ03NfZAmd2vipqsKpc8iLi-pknDt1n6pRocori5656dzScG6SI1FDml0Yyh4KTia34bMdn-jk72c-_iygqQteWHv"/>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<div class="flex items-center gap-base mb-sm">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-md text-label-md text-primary tracking-widest uppercase">DÉCOUVERTE</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Je suis un Utilisateur</h2>
+<p class="font-body-md text-body-md text-secondary mb-lg flex-grow">
+                            Explorez des expériences uniques, réservez vos séances de sport et trouvez les meilleurs conseils pour votre santé au quotidien.
+                        </p>
+<button class="w-full py-md px-lg bg-primary-container text-on-primary font-label-md text-label-md rounded-lg hover:brightness-110 active:scale-95 transition-all flex justify-center items-center gap-xs">
+                            Commencer l'aventure
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Path 2: Partenaire -->
+<div class="group relative flex flex-col glass-card border border-outline-variant rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0px_8px_30px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer">
+<div class="aspect-video w-full overflow-hidden">
+<img alt="Partenaire" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="professional trainer checking tablet in a high-end gym environment with sleek equipment and modern lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLG30c4WDBzpY8fDAVay1bbJo07m4mqoBYx937u8K2RiFisOAOEDda1kcVQnDxC_Wvzhi8SRwLpJcgMmdr8awG0lOlYZw03Xsu1SzllGN3JFfzyV5uwyUmKr-xo4HJME6uPnJN1d9rGxTdWa_5VmmdyQkHJHoPWQtZxhcO4f2puJD5xPvqEcCU6o-laX4497_vYL_eTcZJBGhfWpj1Ifrc_-XFKaBywlb2ZF1NRCbGWbowKZiZhWUDY7k_tlJI0B7295d1TJxIwMvm"/>
+</div>
+<div class="p-lg flex flex-col flex-grow">
+<div class="flex items-center gap-base mb-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">business_center</span>
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">PROFESSIONNEL</span>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-md">Je suis un Partenaire</h2>
+<p class="font-body-md text-body-md text-secondary mb-lg flex-grow">
+                            Gérez vos activités, développez votre visibilité et suivez vos performances grâce à nos outils de management spécialisés.
+                        </p>
+<button class="w-full py-md px-lg bg-on-surface text-surface font-label-md text-label-md rounded-lg hover:bg-opacity-90 active:scale-95 transition-all flex justify-center items-center gap-xs">
+                            Espace professionnel
+                            <span class="material-symbols-outlined text-[18px]">dashboard</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bottom Branding/Footer -->
+<div class="mt-xl pt-lg border-t border-surface-variant flex flex-col md:flex-row justify-between items-center gap-md">
+<p class="font-caption text-caption text-outline">© 2024 ZenithHealth - MyBestEvents. Tous droits réservés.</p>
+<div class="flex gap-lg">
+<a class="font-caption text-caption text-outline hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+<a class="font-caption text-caption text-outline hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Decorative Elements -->
+<div class="fixed bottom-margin-mobile left-margin-mobile z-0 hidden lg:block opacity-40">
+<div class="flex flex-col gap-xs font-caption text-caption text-outline uppercase tracking-[0.2em] [writing-mode:vertical-lr] rotate-180">
+            Wellness • Excellence • Community
+        </div>
+</div>
+</body></html>

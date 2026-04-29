@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-tertiary-fixed": "#1a1c1c", "outline-variant": "#bccabd", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", secondary: "#5f5e5e", "on-background": "#1a1c1c", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "on-secondary": "#ffffff", "on-primary-fixed": "#002110", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", outline: "#6d7a6f", "on-error-container": "#93000a", error: "#ba1a1a", "primary-container": "#2bb673", "on-surface-variant": "#3d4a40", "on-surface": "#1a1c1c", "error-container": "#ffdad6", "on-secondary-container": "#636262", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", background: "#f9f9f9", "surface-bright": "#f9f9f9", tertiary: "#5d5f5f", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-low": "#f3f3f3", primary: "#006d40", "on-tertiary": "#ffffff", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", surface: "#f9f9f9", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-container": "#353738", "inverse-surface": "#2f3131", "primary-fixed": "#7afbb1"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {base: "8px", xl: "32px", "margin-desktop": "40px", lg: "24px", gutter: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", md: "16px"}, fontFamily: {h3: ["Inter"], h2: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], caption: ["Inter"], "body-lg": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        body {
+            background-color: #f9f9f9;
+        }
+        .sphere-card {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .sphere-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .premium-slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            background: #e2e2e2;
+            border-radius: 999px;
+            outline: none;
+        }
+        .premium-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #2bb673;
+            cursor: pointer;
+            border-radius: 50%;
+            border: 2px solid white;
+            box-shadow: 0px 4px 10px rgba(43, 182, 115, 0.3);
+        }
+        .tap-highlight-transparent {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased overflow-x-hidden">
+<!-- Header / Progress (Onboarding Focused) -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100 h-16 flex items-center px-margin-mobile md:px-margin-desktop justify-between">
+<div class="flex items-center gap-4">
+<span class="font-h2 text-primary tracking-tight">Zenith Wellness</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="h-2 w-32 bg-surface-variant rounded-full overflow-hidden hidden sm:block">
+<div class="h-full w-2/3 bg-primary-container rounded-full"></div>
+</div>
+<span class="font-label-md text-on-surface-variant ml-2">Étape 2 sur 3</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="mb-xl text-center md:text-left">
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Vos sphères de bien-être</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">Définissez vos priorités parmi nos 7 piliers. Zenith Wellness adapte votre expérience en fonction de ce qui compte vraiment pour vous.</p>
+</section>
+<!-- Bento Grid Questionnaire -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-lg">
+<!-- Sphere 1: Corps (Large) -->
+<div class="md:col-span-8 sphere-card bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col md:flex-row h-full">
+<div class="w-full md:w-2/5 h-48 md:h-auto relative">
+<img alt="Person practicing meditation" class="w-full h-full object-cover" data-alt="Calm person in white linen clothing practicing yoga in a bright minimalist studio with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2IqGc0bzlROfQ-l4yhnbC1OTZxtWXooyVgFMr7WsZR1nm2G-QIZG8upYvmOh0USuezgdIZSdMpswl0pmrKLlgjRVWEofX78__vOr73romnzL3tLED9lQkxxKzk2vDvmLU1Zd506fUYMF33jouifxk5iK5LLfGhescPLaIaOBw3IkrOtRs2GSyZu9V1ARjn4rzeLTzJmgwCCWtj6WclOJibpLaDQcIbfq7dAz6IK7Vl7Tib182tLG0vEwYyBe7UxZYLmfhvI9TV5A3"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="accessibility_new">accessibility_new</span>
+<span class="font-label-md text-on-surface">Corps</span>
+</div>
+</div>
+<div class="p-lg flex flex-col justify-between w-full">
+<div>
+<h3 class="font-h3 text-h3 mb-sm">Vitalité &amp; Corps</h3>
+<p class="font-body-md text-on-surface-variant mb-md">Votre relation avec votre condition physique et votre récupération.</p>
+<div class="space-y-lg">
+<div>
+<label class="font-label-md block mb-xs">Niveau de priorité</label>
+<input class="premium-slider" max="100" min="0" type="range" value="75"/>
+<div class="flex justify-between mt-2 text-caption text-secondary">
+<span>Maintenir</span>
+<span>Transformer</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-sm">
+<label class="flex items-center p-sm border border-slate-100 rounded-lg cursor-pointer hover:bg-surface-container transition-colors group">
+<input checked="" class="rounded border-slate-300 text-primary focus:ring-primary h-5 w-5 mr-3" type="checkbox"/>
+<span class="font-body-md text-secondary group-hover:text-on-surface">Récupération</span>
+</label>
+<label class="flex items-center p-sm border border-slate-100 rounded-lg cursor-pointer hover:bg-surface-container transition-colors group">
+<input class="rounded border-slate-300 text-primary focus:ring-primary h-5 w-5 mr-3" type="checkbox"/>
+<span class="font-body-md text-secondary group-hover:text-on-surface">Flexibilité</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sphere 2: Alimentation -->
+<div class="md:col-span-4 sphere-card bg-surface-container-lowest rounded-xl p-lg flex flex-col gap-md">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-emerald-50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="restaurant">restaurant</span>
+</div>
+<h3 class="font-h3 text-h3">Alimentation</h3>
+</div>
+<p class="font-body-md text-on-surface-variant">L'énergie par une nutrition consciente et équilibrée.</p>
+<div class="mt-auto pt-md border-t border-slate-50">
+<label class="font-label-md block mb-sm">Objectif principal</label>
+<div class="space-y-2">
+<div class="flex items-center justify-between p-sm rounded-lg bg-surface-container-low">
+<span class="font-body-md">Énergie durable</span>
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-sm rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer">
+<span class="font-body-md">Détoxification</span>
+<span class="material-symbols-outlined text-slate-300" data-icon="circle">circle</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sphere 3: Émotions -->
+<div class="md:col-span-4 sphere-card bg-white rounded-xl overflow-hidden flex flex-col">
+<img alt="Abstract light background" class="w-full h-32 object-cover" data-alt="Soft abstract gradients of peach, lavender, and soft green merging smoothly with a subtle noise texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAza--HkZtzqrLsxzCbBe97jR1pvJBS9Nwq5caoNm5a4WyGi0UgPuFcpcybzh7HoUUVZNCORyy0BTMsEmbVlpdw9FFhCccVdurbhx8qBP7AB-fzQwN6xZZokqEqMOVd_PEhasIastxpLPc27jCDj9XWCAoRnpz0vyHwt5F6CJiLpRTuFTd-UdfEAZvph-_n2Rrr-iECcFRZ_ZETiSYUDpr2GDr8aQu1xCdLSrcbfU1mfvusMcD383toorcWMIxTk0ivpCUZu0ZrmJca"/>
+<div class="p-lg">
+<h3 class="font-h3 text-h3 mb-sm">Émotions</h3>
+<p class="font-body-md text-on-surface-variant mb-md">Équilibre intérieur et gestion de la sérénité.</p>
+<input class="premium-slider" max="100" min="0" type="range" value="40"/>
+</div>
+</div>
+<!-- Sphere 4: Mouvement (Focus) -->
+<div class="md:col-span-4 sphere-card bg-primary text-white rounded-xl p-lg flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-md">
+<h3 class="font-h3 text-h3">Mouvement</h3>
+<span class="material-symbols-outlined text-3xl" data-icon="bolt">bolt</span>
+</div>
+<p class="font-body-md opacity-90">Rythme et intensité de vos journées.</p>
+</div>
+<div class="flex gap-2 flex-wrap mt-lg">
+<span class="px-3 py-1 rounded-full bg-white/20 font-label-md">Cardio</span>
+<span class="px-3 py-1 rounded-full bg-white/20 font-label-md">Force</span>
+<span class="px-3 py-1 rounded-full bg-white border border-white text-primary font-label-md">Douceur</span>
+</div>
+</div>
+<!-- Sphere 5: Social -->
+<div class="md:col-span-4 sphere-card bg-surface-container-lowest rounded-xl p-lg flex flex-col">
+<h3 class="font-h3 text-h3 mb-sm">Social</h3>
+<p class="font-body-md text-on-surface-variant mb-xl">Qualité des connexions et partage d'expériences.</p>
+<div class="flex -space-x-3 mt-auto">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-200"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-300"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-slate-400"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-container flex items-center justify-center text-white text-caption">+12</div>
+</div>
+</div>
+<!-- Sphere 6: Sens (Premium card) -->
+<div class="md:col-span-6 sphere-card bg-white rounded-xl p-lg flex items-center gap-lg border-l-4 border-primary">
+<div class="flex-1">
+<h3 class="font-h3 text-h3 mb-xs">Sens &amp; Alignement</h3>
+<p class="font-body-md text-on-surface-variant">Trouver votre "Pourquoi" à travers vos activités quotidiennes.</p>
+</div>
+<div class="hidden sm:block">
+<span class="material-symbols-outlined text-primary text-5xl opacity-20" data-icon="auto_awesome">auto_awesome</span>
+</div>
+</div>
+<!-- Sphere 7: Environnement -->
+<div class="md:col-span-6 sphere-card bg-white rounded-xl p-lg flex items-center justify-between">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary bg-emerald-50 p-3 rounded-lg" data-icon="forest">forest</span>
+<div>
+<h3 class="font-h3 text-h3">Environnement</h3>
+<p class="font-caption text-secondary">Harmonie avec votre espace de vie.</p>
+</div>
+</div>
+<button class="w-12 h-12 rounded-full border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined text-slate-400" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Sticky Bottom Action -->
+<div class="fixed bottom-0 left-0 w-full p-lg bg-white/80 backdrop-blur-xl border-t border-slate-100 z-50">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-md">
+<button class="text-secondary font-label-md px-6 py-3 hover:text-on-surface transition-colors">Passer pour le moment</button>
+<div class="flex gap-md w-full sm:w-auto">
+<button class="flex-1 sm:flex-none bg-primary text-white font-label-md px-10 py-4 rounded-xl shadow-lg hover:shadow-primary-container/40 active:scale-95 transition-all flex items-center justify-center gap-2">
+                        Continuer
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB for quick help -->
+<button class="fixed bottom-32 right-6 md:right-10 w-14 h-14 rounded-full bg-white shadow-xl border border-slate-100 flex items-center justify-center text-primary active:scale-90 transition-transform z-40">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</body></html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-tertiary-fixed": "#1a1c1c", "outline-variant": "#bccabd", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", secondary: "#5f5e5e", "on-background": "#1a1c1c", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "on-secondary": "#ffffff", "on-primary-fixed": "#002110", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", outline: "#6d7a6f", "on-error-container": "#93000a", error: "#ba1a1a", "primary-container": "#2bb673", "on-surface-variant": "#3d4a40", "on-surface": "#1a1c1c", "error-container": "#ffdad6", "on-secondary-container": "#636262", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", background: "#f9f9f9", "surface-bright": "#f9f9f9", tertiary: "#5d5f5f", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-low": "#f3f3f3", primary: "#006d40", "on-tertiary": "#ffffff", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", surface: "#f9f9f9", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-container": "#353738", "inverse-surface": "#2f3131", "primary-fixed": "#7afbb1"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {base: "8px", xl: "32px", "margin-desktop": "40px", lg: "24px", gutter: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", md: "16px"}, fontFamily: {h3: ["Inter"], h2: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], caption: ["Inter"], "body-lg": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        body { background-color: #f9f9f9; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-shadow { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); }
+        .fab-shadow { box-shadow: 0px 8px 24px rgba(43, 182, 115, 0.2); }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 border-r hidden lg:flex flex-col sticky top-0 left-0 py-6 bg-white border-slate-100">
+<div class="px-6 mb-8">
+<div class="text-[#2BB673] font-black text-lg">Partner Portal</div>
+<div class="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">Zenith Business</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-slate-600 mx-2 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md">Dashboard</span>
+</a>
+<a class="bg-emerald-50 text-[#2BB673] rounded-lg mx-2 px-4 py-3 transition-all duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-md">Mes Activités</span>
+</a>
+<a class="text-slate-600 mx-2 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="book_online">book_online</span>
+<span class="font-label-md">Réservations</span>
+</a>
+<a class="text-slate-600 mx-2 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-md">Clients</span>
+</a>
+<a class="text-slate-600 mx-2 px-4 py-3 hover:bg-slate-50 rounded-lg transition-all duration-200 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md">Paramètres</span>
+</a>
+</nav>
+<div class="mt-auto px-6 border-t border-slate-100 pt-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="professional male profile picture for partner dashboard with friendly smile and corporate attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLVSFIkikk0BSMPq4fATe0Xv4FSxjvOANRTfd1XQc_n89lptnetuB_kv_ovM6ZJPYw65Fz5nQwlynh_je5lX0gG_Bv7OjrkT-pFItk7hRSmkbd9cqSmLFWb6Sys9C6Jqgq0fLHB0tmA-9t5fp8OR1imBvFonF9ogHUwq1cucZIRBNFBI9sC1R58P8sJ5fJW6Qv3DD7w_eSHC3mhWiaepE-u_5cv5mfze90uq96lkh7XBf3hSV3mNdA2g1sUzs-sa6ANuixvot-I7er"/>
+</div>
+<div>
+<div class="text-sm font-bold">Jean Dupuis</div>
+<div class="text-[10px] text-slate-400">Gérant Wellness Spa</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 min-w-0 bg-background pb-24 lg:pb-12">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md lg:static lg:bg-transparent lg:border-none">
+<div class="flex justify-between items-center h-16 px-5 md:px-10 max-w-7xl mx-auto">
+<h1 class="font-h2 text-on-background lg:hidden">Mes Activités</h1>
+<div class="hidden lg:block">
+<h1 class="font-h1 text-on-background">Gestion des Offres</h1>
+<p class="text-caption text-secondary">Créez et optimisez vos services bien-être</p>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+<button class="bg-primary-container text-white px-5 py-2.5 rounded-full font-label-md flex items-center gap-2 hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]" data-icon="add">add</span>
+<span>Nouvelle Offre</span>
+</button>
+</div>
+</div>
+</header>
+<div class="px-5 md:px-10 max-w-7xl mx-auto mt-20 lg:mt-8">
+<!-- Dashboard Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<div class="bg-white p-lg rounded-xl custom-shadow border border-slate-50">
+<div class="flex items-center justify-between mb-4">
+<span class="text-caption font-semibold text-secondary uppercase tracking-tighter">Conversion Moyenne</span>
+<span class="p-2 bg-emerald-50 text-[#2BB673] rounded-lg">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</span>
+</div>
+<div class="font-h1 text-[#2BB673]">12.4%</div>
+<div class="text-caption text-secondary mt-1">+2.1% par rapport au mois dernier</div>
+</div>
+<div class="bg-white p-lg rounded-xl custom-shadow border border-slate-50">
+<div class="flex items-center justify-between mb-4">
+<span class="text-caption font-semibold text-secondary uppercase tracking-tighter">Revenu Total (30j)</span>
+<span class="p-2 bg-slate-50 text-slate-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</span>
+</div>
+<div class="font-h1">4 850 €</div>
+<div class="text-caption text-secondary mt-1">Sur 8 offres actives</div>
+</div>
+<div class="bg-white p-lg rounded-xl custom-shadow border border-slate-50">
+<div class="flex items-center justify-between mb-4">
+<span class="text-caption font-semibold text-secondary uppercase tracking-tighter">Vues Totales</span>
+<span class="p-2 bg-slate-50 text-slate-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</span>
+</div>
+<div class="font-h1">2.1k</div>
+<div class="text-caption text-secondary mt-1">Visibilité en hausse de 15%</div>
+</div>
+</div>
+<!-- Offers Management Section -->
+<div class="flex flex-col lg:flex-row gap-xl">
+<!-- List of current offers -->
+<div class="flex-1 space-y-gutter">
+<h3 class="font-h3 mb-4">Offres Actives</h3>
+<!-- Offer Card 1 -->
+<div class="bg-white rounded-xl overflow-hidden custom-shadow border border-slate-50 flex flex-col md:flex-row">
+<div class="md:w-48 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up of massage therapy with warm oils and stones in a serene luxury spa environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7YeHcVRRb1UTq3tLkHDApgzjCX8fs0eRrbCxQHJ9AbeSoSr4Ih5yVIDkrNouTXUTmdX9SpWaV7B6HWF1EKpIc1qBrmatBAHERTpXnmIC5Uw9we0sUNrvMQkiGM_ArMjzSsRa0I6RNFdZzOV1J2EeWeXKumiqO3uyCUfwXpGs9aJf5_KBJ-nguJUT6CJgChTuHScqxr3P-XnjjUdTnWbL9z8tyHtMXf22QXzY7HBnLdPGjNjjbBWzHZz-oxXAF3kltYqZ4kt6zCgX6"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-h3">Massage Ayurvédique</h4>
+<span class="bg-emerald-50 text-[#2BB673] px-3 py-1 rounded-full text-[10px] font-bold uppercase">En ligne</span>
+</div>
+<p class="text-caption text-secondary mt-2 line-clamp-2">Massage complet du corps aux huiles chaudes pour rééquilibrer les énergies.</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-[#2BB673]" data-icon="sell">sell</span>
+<span class="text-label-md">85 €</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-slate-400" data-icon="schedule">schedule</span>
+<span class="text-label-md">60 min</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-50">
+<div class="flex gap-4">
+<div>
+<div class="text-[10px] text-slate-400 uppercase font-bold">Vues</div>
+<div class="text-label-md">842</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-400 uppercase font-bold">Conv.</div>
+<div class="text-label-md text-[#2BB673]">14.2%</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-400 transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-400 transition-all">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+</button>
+<button class="p-2 hover:bg-red-50 rounded-lg text-red-400 transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Offer Card 2 -->
+<div class="bg-white rounded-xl overflow-hidden custom-shadow border border-slate-50 flex flex-col md:flex-row">
+<div class="md:w-48 h-48 md:h-auto overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="peaceful yoga class in a bright minimalist studio with natural wood floors and large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdQyRBkcQQ5UePyvwYYpNzCm5_1Z8ZO37fByH0t6KjWz0aX-g_6sEt5zDb1W7gkMhoKlLiNMJDAooZhwcDaGlv1vyoFAkOoD4EYEt5TkLMUgUvZ19jqlER8phZR_1JWFI5_LRD-7I_x7Ft277n4jVWxKL6bCPWOVTlNczKhoqph2vT4Ye6f9kv9Z7NA-gc49EOmliOAyazP34L0xBiLK32JIpVFbGfk3w6l0yolreXpTbGODo3uFLsFZVWhe5OGbPX7-y_TBCreKb"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-h3">Session Yoga Vinyasa</h4>
+<span class="bg-slate-100 text-slate-400 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Brouillon</span>
+</div>
+<p class="text-caption text-secondary mt-2 line-clamp-2">Cours collectif dynamique axé sur la respiration et le mouvement fluide.</p>
+<div class="flex items-center gap-4 mt-4">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-slate-400" data-icon="sell">sell</span>
+<span class="text-label-md">25 €</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-slate-400" data-icon="schedule">schedule</span>
+<span class="text-label-md">90 min</span>
+</div>
+</div>
+</div>
+<div class="mt-6 flex items-center justify-between pt-4 border-t border-slate-50">
+<div class="flex gap-4 opacity-50">
+<div>
+<div class="text-[10px] text-slate-400 uppercase font-bold">Vues</div>
+<div class="text-label-md">0</div>
+</div>
+<div>
+<div class="text-[10px] text-slate-400 uppercase font-bold">Conv.</div>
+<div class="text-label-md">-</div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-slate-50 rounded-lg text-slate-400 transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 hover:bg-red-50 rounded-lg text-red-400 transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Creation Form -->
+<div class="lg:w-[450px]">
+<div class="bg-white p-lg rounded-xl custom-shadow border border-slate-100 sticky top-24">
+<h3 class="font-h3 mb-6">Nouvelle Offre</h3>
+<form class="space-y-lg">
+<div>
+<label class="block text-label-md mb-2">Titre de l'événement</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-[#2BB673] focus:border-[#2BB673] text-body-md py-3 px-4 outline-none border" placeholder="ex: Retraite Méditation" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md mb-2">Prix (€)</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-[#2BB673] focus:border-[#2BB673] text-body-md py-3 px-4 outline-none border" placeholder="45" type="number"/>
+</div>
+<div>
+<label class="block text-label-md mb-2">Durée (min)</label>
+<input class="w-full border-slate-200 rounded-lg focus:ring-[#2BB673] focus:border-[#2BB673] text-body-md py-3 px-4 outline-none border" placeholder="60" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-label-md mb-2">Description</label>
+<textarea class="w-full border-slate-200 rounded-lg focus:ring-[#2BB673] focus:border-[#2BB673] text-body-md py-3 px-4 outline-none border" placeholder="Décrivez votre service..." rows="3"></textarea>
+</div>
+<div>
+<label class="block text-label-md mb-2">Photos (min. 1)</label>
+<div class="border-2 border-dashed border-slate-200 rounded-xl p-6 text-center hover:border-[#2BB673] transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-4xl text-slate-300 group-hover:text-[#2BB673] mb-2" data-icon="add_a_photo">add_a_photo</span>
+<p class="text-caption text-secondary">Glissez vos images ici ou cliquez pour parcourir</p>
+</div>
+</div>
+<div>
+<label class="block text-label-md mb-2">Disponibilités</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-2 bg-slate-100 rounded-lg text-caption font-bold" type="button">LUN</button>
+<button class="px-3 py-2 bg-[#1E1E1E] text-white rounded-lg text-caption font-bold" type="button">MAR</button>
+<button class="px-3 py-2 bg-[#1E1E1E] text-white rounded-lg text-caption font-bold" type="button">MER</button>
+<button class="px-3 py-2 bg-slate-100 rounded-lg text-caption font-bold" type="button">JEU</button>
+<button class="px-3 py-2 bg-[#1E1E1E] text-white rounded-lg text-caption font-bold" type="button">VEN</button>
+<button class="px-3 py-2 bg-slate-100 rounded-lg text-caption font-bold" type="button">SAM</button>
+</div>
+</div>
+<div class="pt-4 flex gap-4">
+<button class="flex-1 border border-slate-200 text-on-background py-4 rounded-xl font-label-md hover:bg-slate-50 active:scale-95 transition-all">Sauvegarder Brouillon</button>
+<button class="flex-1 bg-primary-container text-white py-4 rounded-xl font-label-md hover:opacity-90 active:scale-95 transition-all">Publier l'Offre</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 mt-24 border-t border-slate-200">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-7xl mx-auto gap-8">
+<div class="font-bold text-[#1E1E1E]">Zenith Wellness.</div>
+<div class="flex gap-8">
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4 opacity-80 hover:opacity-100" href="#">À propos</a>
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4 opacity-80 hover:opacity-100" href="#">Mentions légales</a>
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4 opacity-80 hover:opacity-100" href="#">Aide</a>
+</div>
+<p class="text-sm font-['Inter'] text-slate-500">© 2024 Zenith Wellness. Conciergerie Bien-être.</p>
+</div>
+</footer>
+</main>
+</div>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-4 bg-white/95 backdrop-blur-lg border-t border-slate-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium font-['Inter']">Explorateur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2BB673] font-semibold tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="text-[11px] font-medium font-['Inter']">Mes Activités</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="text-[11px] font-medium font-['Inter']">Agenda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="text-[11px] font-medium font-['Inter']">Profil</span>
+</a>
+</nav>
+<!-- FAB -->
+<button class="fixed bottom-24 right-6 md:bottom-8 md:right-8 w-14 h-14 bg-primary-container text-white rounded-full flex items-center justify-center fab-shadow hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+</body></html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-background": "#1a1c1c", secondary: "#5f5e5e", "inverse-primary": "#5cde97", "inverse-on-surface": "#f1f1f1", "surface-container": "#eeeeee", "on-error": "#ffffff", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#454747", "surface-container-low": "#f3f3f3", "on-secondary-fixed": "#1b1b1c", "inverse-surface": "#2f3131", "surface-container-high": "#e8e8e8", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#1a1c1c", "on-surface-variant": "#3d4a40", "on-primary-container": "#004024", "on-error-container": "#93000a", "error-container": "#ffdad6", surface: "#f9f9f9", "on-secondary": "#ffffff", "tertiary-fixed": "#e2e2e2", "on-secondary-container": "#636262", background: "#f9f9f9", "surface-dim": "#dadada", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#353738", "on-secondary-fixed-variant": "#474746", error: "#ba1a1a", "tertiary-container": "#9fa0a0", "surface-variant": "#e2e2e2", primary: "#006d40", "primary-fixed-dim": "#5cde97", "on-primary-fixed": "#002110", "primary-container": "#2bb673", "surface-container-highest": "#e2e2e2", "primary-fixed": "#7afbb1", "secondary-container": "#e2dfde", "tertiary-fixed-dim": "#c6c6c7", "surface-bright": "#f9f9f9", "secondary-fixed-dim": "#c8c6c5", "on-surface": "#1a1c1c", "surface-tint": "#006d40", "on-primary-fixed-variant": "#00522f", outline: "#6d7a6f", "outline-variant": "#bccabd", "secondary-fixed": "#e5e2e1", tertiary: "#5d5f5f"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {xl: "32px", sm: "12px", "margin-desktop": "40px", "margin-mobile": "20px", xs: "4px", gutter: "16px", md: "16px", base: "8px", lg: "24px"}, fontFamily: {caption: ["Inter"], "label-md": ["Inter"], h3: ["Inter"], h1: ["Inter"], h2: ["Inter"], "body-lg": ["Inter"], "body-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        body { background-color: #f9f9f9; }
+        .glass-effect { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .shadow-soft { shadow-[0px_4px_20px_rgba(0,0,0,0.05)]; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center h-16 px-5 w-full">
+<button class="active:opacity-70 transition-opacity p-2 rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined text-emerald-500">menu</span>
+</button>
+<h1 class="text-xl font-bold text-emerald-600 dark:text-emerald-400 font-['Inter'] antialiased tracking-tight">MyBestEvents</h1>
+<button class="active:opacity-70 transition-opacity p-2 rounded-full hover:bg-gray-50">
+<span class="material-symbols-outlined text-emerald-500">search</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-24 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
+<!-- Conversational Input Section -->
+<section class="mb-xl">
+<div class="flex flex-col gap-md">
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<p class="font-h3 text-h3 text-on-surface">Comment tu te sens aujourd’hui ?</p>
+</div>
+<div class="relative group">
+<textarea class="w-full p-lg bg-surface-container-lowest border border-outline-variant rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all shadow-soft font-body-md" placeholder="Ex: Je me sens un peu stressé et j'ai besoin de me reconnecter à la nature..." rows="3"></textarea>
+<button class="absolute bottom-4 right-4 bg-primary text-on-primary px-lg py-sm rounded-full font-label-md flex items-center gap-base active:scale-95 transition-all shadow-lg">
+<span>Lancer le Match</span>
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Mood Indicator Pills -->
+<section class="mb-xl flex flex-wrap gap-sm">
+<button class="px-lg py-sm rounded-full bg-on-background text-on-primary font-label-md">Tout</button>
+<button class="px-lg py-sm rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-variant transition-colors">Stressé</button>
+<button class="px-lg py-sm rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-variant transition-colors">Énergique</button>
+<button class="px-lg py-sm rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-variant transition-colors">Fatigué</button>
+<button class="px-lg py-sm rounded-full bg-surface-container text-on-surface-variant font-label-md hover:bg-surface-variant transition-colors">Curieux</button>
+</section>
+<!-- IA Match Results -->
+<section>
+<div class="flex items-center justify-between mb-lg">
+<h2 class="font-h2 text-h2 text-on-background">IA Match : TOP 3</h2>
+<span class="text-caption text-secondary font-caption">Basé sur votre profil</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-soft group hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-[16/9] relative">
+<img class="w-full h-full object-cover" data-alt="Serene person practicing yoga in a bright minimalist studio with soft natural light and plants in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWwhRxYDt5VVOxB1RqXLymuavXjEm2hfMSCcy_5aDV3gxdK6Cvdqhdb3i_Da90BqwpKh8DJgdRUkpq7zZwFQoptZs59e3vGVGSzI2Rab0C6gNHpfC2U4S1Hct2c5tQi9zGR1h5sZazDe9-Nn-z6aZ3kBKpvVgxYBseTInm5Z6BmXb2xYnr7Zh1KorrgpoOKw4AK-b5zJBmIq-QKy6TfoVXzGyAUUsJbC9jX91Q4kFq6JyGzZCvdTLQy1Q2ul0QAIM_nk1Sfik_PdgW"/>
+<div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-sm py-xs rounded-lg font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            98% Match
+                        </div>
+</div>
+<div class="p-lg">
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Yoga Somatique</h3>
+<p class="text-caption text-primary font-label-md mb-md">Par Studio Équilibre</p>
+<div class="bg-surface-container-low p-md rounded-lg mb-lg border-l-4 border-primary">
+<p class="text-caption text-on-surface-variant font-body-md italic leading-tight">"Idéal pour relâcher les tensions accumulées que vous avez mentionnées."</p>
+</div>
+<button class="w-full py-sm bg-primary text-on-primary rounded-lg font-label-md active:opacity-90 transition-opacity">
+                            Réserver maintenant
+                        </button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-soft group hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-[16/9] relative">
+<img class="w-full h-full object-cover" data-alt="Aerial view of a misty pine forest in the early morning with sunlight filtering through the trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzXgEvumSbwMK6zMqixLIgnoLUWnMu4ZPZbdHGY1mntVDryX5e30_hWlbsSa6-O_8KpL7A7_y13lDXm8NCP_ykCDzW1f3vhW1DTx0H4vWkmG7NokTugZed9keQ7BmLBMV77uSoz6maUareVG6h3_78HB_A9975j54PvJBZ5QNtjoz500UAeqdg2xJCTpFJ6rvEyeykIrYFhLbdJTG2eMbMWJH6m8aUqDeD0jvNLkz3mUnK-eK6-3qioMZz-B45LrFixt99SrJyeDAr"/>
+<div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-sm py-xs rounded-lg font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            94% Match
+                        </div>
+</div>
+<div class="p-lg">
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Marche Méditative</h3>
+<p class="text-caption text-primary font-label-md mb-md">Par Nature &amp; Sens</p>
+<div class="bg-surface-container-low p-md rounded-lg mb-lg border-l-4 border-primary">
+<p class="text-caption text-on-surface-variant font-body-md italic leading-tight">"Votre besoin de nature sera comblé par cette immersion sensorielle."</p>
+</div>
+<button class="w-full py-sm bg-primary text-on-primary rounded-lg font-label-md active:opacity-90 transition-opacity">
+                            Réserver maintenant
+                        </button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-soft group hover:translate-y-[-4px] transition-all duration-300">
+<div class="aspect-[16/9] relative">
+<img class="w-full h-full object-cover" data-alt="Artisan ceramicist working with clay on a potter's wheel in a rustic warm-toned workshop studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLfSGDVcj3vq8Dbj1G8Wyhv1bY788JOru0kaizcUFkKkAp1y2rfLLfHvZCQXw4SQLMWFIcs3_a8GJ01KPsoPcV1ulzgYPozZKb-9A_89pfqgGOhUnL26gpeV5yrg8kpeKaOrIId92-Y_1DD6SAggOYGdK2cOg4eZnxqjvqbswXUrtCyYKfw8C8e-OEzHYEBJ7yR3hLHlShyhZyL8J1zD43VE0uXX7Yuk6v5lMiBD4puTxmM_vBtYapCRu1CXdj6AIkn7bqvhgCtf-S"/>
+<div class="absolute top-3 left-3 bg-primary-container text-on-primary-container px-sm py-xs rounded-lg font-label-md flex items-center gap-xs">
+<span class="material-symbols-outlined text-[16px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            89% Match
+                        </div>
+</div>
+<div class="p-lg">
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Atelier Céramique</h3>
+<p class="text-caption text-primary font-label-md mb-md">Par L'Atelier Créatif</p>
+<div class="bg-surface-container-low p-md rounded-lg mb-lg border-l-4 border-primary">
+<p class="text-caption text-on-surface-variant font-body-md italic leading-tight">"Une activité manuelle pour sortir de vos pensées et créer du concret."</p>
+</div>
+<button class="w-full py-sm bg-primary text-on-primary rounded-lg font-label-md active:opacity-90 transition-opacity">
+                            Réserver maintenant
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Secondary Suggestion: Spheres of Wellness -->
+<section class="mt-xl">
+<h3 class="font-h3 text-h3 text-on-background mb-lg">Vos sphères de bien-être</h3>
+<div class="bg-surface-container-low rounded-xl p-lg flex items-center gap-lg">
+<div class="flex-1">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-label-md font-label-md text-on-surface">Émotionnel</span>
+<span class="text-label-md font-label-md text-primary">85%</span>
+</div>
+<div class="w-full bg-white rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-xs">
+<span class="text-label-md font-label-md text-on-surface">Physique</span>
+<span class="text-label-md font-label-md text-primary">62%</span>
+</div>
+<div class="w-full bg-white rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 62%"></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 border-t pb-safe bg-white dark:bg-gray-900 border-gray-100 dark:border-gray-800 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-around items-center h-16 w-full px-2">
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium font-['Inter']">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<span class="text-[10px] font-medium font-['Inter']">Partners</span>
+</a>
+<a class="flex flex-col items-center justify-center text-emerald-500 dark:text-emerald-400 scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<span class="text-[10px] font-medium font-['Inter']">Match IA</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="text-[10px] font-medium font-['Inter']">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-400 active:scale-90 transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium font-['Inter']">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

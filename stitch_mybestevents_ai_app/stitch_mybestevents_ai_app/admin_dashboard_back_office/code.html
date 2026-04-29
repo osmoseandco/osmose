@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WellnessCore Admin Panel</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-surface-variant": "#3d4a40", outline: "#6d7a6f", "tertiary-container": "#9fa0a0", "surface-container": "#eeeeee", "surface-bright": "#f9f9f9", "primary-fixed-dim": "#5cde97", "on-secondary-container": "#636262", "tertiary-fixed": "#e2e2e2", secondary: "#5f5e5e", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#474746", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-fixed": "#1a1c1c", "inverse-on-surface": "#f1f1f1", "on-surface": "#1a1c1c", "secondary-fixed": "#e5e2e1", "inverse-surface": "#2f3131", "surface-variant": "#e2e2e2", "surface-tint": "#006d40", "primary-fixed": "#7afbb1", "on-error": "#ffffff", "surface-container-highest": "#e2e2e2", tertiary: "#5d5f5f", "surface-container-low": "#f3f3f3", "secondary-fixed-dim": "#c8c6c5", "error-container": "#ffdad6", "on-primary-fixed": "#002110", "inverse-primary": "#5cde97", error: "#ba1a1a", "surface-container-high": "#e8e8e8", "primary-container": "#2bb673", primary: "#006d40", "on-primary-container": "#004024", surface: "#f9f9f9", "secondary-container": "#e2dfde", "surface-container-lowest": "#ffffff", "on-tertiary-fixed-variant": "#454747", "on-tertiary-container": "#353738", "surface-dim": "#dadada", "on-secondary-fixed": "#1b1b1c", background: "#f9f9f9", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "on-background": "#1a1c1c", "on-primary-fixed-variant": "#00522f", "outline-variant": "#bccabd", "on-error-container": "#93000a"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "16px", lg: "24px", "margin-mobile": "20px", xl: "32px", sm: "12px", "margin-desktop": "40px", gutter: "16px", xs: "4px", base: "8px"}, fontFamily: {sans: ["Inter", "sans-serif"], poppins: ["Poppins", "sans-serif"], caption: ["Inter"], "body-md": ["Inter"], h3: ["Inter"], h2: ["Inter"], h1: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        body { background-color: #f9f9f9; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-shadow { box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="font-sans text-on-surface">
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-slate-100 bg-white z-50 flex flex-col py-6">
+<div class="px-8 mb-8">
+<h1 class="text-xl font-black text-slate-900 font-poppins">Admin Panel</h1>
+<p class="text-caption font-caption text-slate-500">Enterprise Tier</p>
+</div>
+<nav class="space-y-1 px-4 flex-grow">
+<!-- Dashboard Active -->
+<a class="flex items-center gap-3 bg-emerald-50 text-emerald-600 rounded-lg px-4 py-3 font-semibold transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-md text-label-md">Event Management</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-label-md text-label-md">Partner Portal</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-label-md text-label-md">Wellness Metrics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Financials</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="px-8 mt-6">
+<button class="w-full bg-primary-container text-on-primary py-3 rounded-xl font-label-md text-label-md shadow-[0px_8px_24px_rgba(43,182,115,0.2)] active:scale-95 transition-transform">
+                Create New Event
+            </button>
+</div>
+<div class="mt-auto px-4 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 hover:bg-slate-50 px-4 py-3 rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 right-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-[0px_4px_20px_rgba(0,0,0,0.03)] h-16 ml-64 flex items-center justify-between px-8">
+<div class="flex items-center gap-8 ml-64">
+<span class="text-lg font-bold tracking-tighter text-emerald-600 font-poppins">WellnessCore</span>
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-1.5 rounded-full border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-container/20 text-sm bg-slate-50" placeholder="Global search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4">
+<button class="text-slate-500 hover:text-primary transition-colors cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-slate-500 hover:text-primary transition-colors cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-8 rounded-full overflow-hidden border-2 border-primary-container/10">
+<img class="h-full w-full object-cover" data-alt="Professional headshot of a smiling executive in a blue suit with clean corporate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ8dMh71e-Uym75M47wQsBTGOimatbM1wLG0dQcZkAePYu5JKR1ta5NH5djNAoHIQRXQYCsyk-Pu-D_xokCp1-Lfsa6Ssix2ropu0Nk6c44kPGfsfh43rH41kbSLoTla_Cc-EZB82-ILAs60DpMLMDOpyDRtl9GMscfBQUiIkpcUe78M5laBrDaxo6TrgYDHY8EOevOKgCJSvxTydOREL5HHUyamOxD2ffzHkLX1DFjhWtI4FiCd5oeXkjemHwLxiSnDh28LyatPr7"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pl-64 pt-16 min-h-screen">
+<div class="p-lg lg:p-xl max-w-7xl mx-auto">
+<!-- Page Header -->
+<div class="flex flex-col gap-base mb-xl">
+<h1 class="font-h1 text-h1 text-on-surface font-poppins">Executive Overview</h1>
+<p class="font-body-lg text-body-lg text-secondary">Real-time performance metrics and partner ecosystem health.</p>
+</div>
+<!-- KPI Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-xl">
+<!-- KPI 1 -->
+<div class="bg-white p-lg rounded-xl soft-shadow border border-slate-100 flex flex-col gap-base">
+<div class="flex items-center justify-between">
+<span class="p-2 bg-emerald-50 text-primary-container rounded-lg">
+<span class="material-symbols-outlined">payments</span>
+</span>
+<span class="text-primary-container text-caption font-label-md">+12.5%</span>
+</div>
+<p class="text-caption font-label-md text-secondary uppercase tracking-wider">Total Revenue</p>
+<h3 class="text-h2 font-h2 text-on-surface font-poppins">$428,500</h3>
+</div>
+<!-- KPI 2 -->
+<div class="bg-white p-lg rounded-xl soft-shadow border border-slate-100 flex flex-col gap-base">
+<div class="flex items-center justify-between">
+<span class="p-2 bg-blue-50 text-blue-500 rounded-lg">
+<span class="material-symbols-outlined">groups</span>
+</span>
+<span class="text-blue-500 text-caption font-label-md">+4 new</span>
+</div>
+<p class="text-caption font-label-md text-secondary uppercase tracking-wider">Active Partners</p>
+<h3 class="text-h2 font-h2 text-on-surface font-poppins">1,284</h3>
+</div>
+<!-- KPI 3 -->
+<div class="bg-white p-lg rounded-xl soft-shadow border border-slate-100 flex flex-col gap-base">
+<div class="flex items-center justify-between">
+<span class="p-2 bg-amber-50 text-amber-500 rounded-lg">
+<span class="material-symbols-outlined">person_add</span>
+</span>
+<span class="text-amber-500 text-caption font-label-md">8 pending</span>
+</div>
+<p class="text-caption font-label-md text-secondary uppercase tracking-wider">New Prospects</p>
+<h3 class="text-h2 font-h2 text-on-surface font-poppins">42</h3>
+</div>
+<!-- KPI 4 -->
+<div class="bg-white p-lg rounded-xl soft-shadow border border-slate-100 flex flex-col gap-base">
+<div class="flex items-center justify-between">
+<span class="p-2 bg-purple-50 text-purple-500 rounded-lg">
+<span class="material-symbols-outlined">monitoring</span>
+</span>
+<span class="text-purple-500 text-caption font-label-md">High</span>
+</div>
+<p class="text-caption font-label-md text-secondary uppercase tracking-wider">Conversions</p>
+<h3 class="text-h2 font-h2 text-on-surface font-poppins">84.2%</h3>
+</div>
+</div>
+<!-- Partners Table Section -->
+<section class="bg-white rounded-xl soft-shadow border border-slate-100 overflow-hidden">
+<div class="p-lg border-b border-slate-100 flex items-center justify-between">
+<h2 class="text-h3 font-h3 font-poppins">Partner Management</h2>
+<div class="flex gap-sm">
+<button class="px-md py-base border border-slate-200 rounded-lg text-label-md font-label-md hover:bg-slate-50 transition-colors">
+                            Export CSV
+                        </button>
+<button class="px-md py-base bg-secondary text-on-primary rounded-lg text-label-md font-label-md hover:opacity-90 transition-opacity">
+                            View All
+                        </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-slate-50/50">
+<th class="px-lg py-md text-caption font-label-md text-slate-500 uppercase tracking-wider">Name</th>
+<th class="px-lg py-md text-caption font-label-md text-slate-500 uppercase tracking-wider">City</th>
+<th class="px-lg py-md text-caption font-label-md text-slate-500 uppercase tracking-wider text-center">AI Score</th>
+<th class="px-lg py-md text-caption font-label-md text-slate-500 uppercase tracking-wider">Status</th>
+<th class="px-lg py-md text-caption font-label-md text-slate-500 uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<!-- Row 1 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<div class="h-10 w-10 rounded-lg bg-emerald-100 flex items-center justify-center text-primary-container font-bold">
+                                            RH
+                                        </div>
+<div>
+<p class="font-label-md text-on-surface">Radiant Health Group</p>
+<p class="text-caption text-slate-500">radiant-health.co</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md text-body-md text-secondary">San Francisco</td>
+<td class="px-lg py-md">
+<div class="flex items-center justify-center">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full font-bold text-caption">98</span>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 border border-error text-error text-caption font-label-md rounded-lg hover:bg-error/5 transition-colors">Suspend</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-600"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<div class="h-10 w-10 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600 font-bold">
+                                            NW
+                                        </div>
+<div>
+<p class="font-label-md text-on-surface">Nexus Wellness</p>
+<p class="text-caption text-slate-500">nexuswell.io</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md text-body-md text-secondary">Austin</td>
+<td class="px-lg py-md">
+<div class="flex items-center justify-center">
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full font-bold text-caption">74</span>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 text-amber-700 rounded-full font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                                        Pending
+                                    </span>
+</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-primary-container text-white text-caption font-label-md rounded-lg hover:opacity-90 transition-opacity">Activate</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-600"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<div class="h-10 w-10 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400 font-bold">
+                                            VM
+                                        </div>
+<div>
+<p class="font-label-md text-on-surface">Vitality Matrix</p>
+<p class="text-caption text-slate-500">v-matrix.com</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md text-body-md text-secondary">New York</td>
+<td class="px-lg py-md">
+<div class="flex items-center justify-center">
+<span class="px-3 py-1 bg-slate-100 text-slate-600 rounded-full font-bold text-caption">42</span>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-100 text-slate-600 rounded-full font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                                        Suspended
+                                    </span>
+</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 bg-primary-container text-white text-caption font-label-md rounded-lg hover:opacity-90 transition-opacity">Activate</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-600"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-slate-50/50 transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-md">
+<div class="h-10 w-10 rounded-lg bg-emerald-100 flex items-center justify-center text-primary-container font-bold">
+                                            EP
+                                        </div>
+<div>
+<p class="font-label-md text-on-surface">Elite Performance</p>
+<p class="text-caption text-slate-500">elite-p.fit</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md text-body-md text-secondary">Miami</td>
+<td class="px-lg py-md">
+<div class="flex items-center justify-center">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full font-bold text-caption">91</span>
+</div>
+</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 rounded-full font-label-md text-caption">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                                        Active
+                                    </span>
+</td>
+<td class="px-lg py-md text-right">
+<div class="flex justify-end gap-2">
+<button class="px-3 py-1.5 border border-error text-error text-caption font-label-md rounded-lg hover:bg-error/5 transition-colors">Suspend</button>
+<button class="p-1.5 text-slate-400 hover:text-slate-600"><span class="material-symbols-outlined">more_vert</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-lg py-md border-t border-slate-100 bg-slate-50/50 flex items-center justify-between">
+<p class="text-caption text-slate-500">Showing 4 of 1,284 partners</p>
+<div class="flex gap-2">
+<button class="p-1.5 border border-slate-200 rounded text-slate-500 hover:bg-white disabled:opacity-50" disabled=""><span class="material-symbols-outlined text-sm">chevron_left</span></button>
+<button class="p-1.5 border border-slate-200 rounded text-slate-500 hover:bg-white"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
+</div>
+</div>
+</section>
+<!-- Asymmetric Grid Section -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-xl mt-xl">
+<!-- Insights Card -->
+<div class="lg:col-span-2 bg-primary-container rounded-xl p-xl text-on-primary flex flex-col justify-between relative overflow-hidden">
+<div class="z-10">
+<h3 class="text-h2 font-h2 font-poppins mb-base">Performance Milestone</h3>
+<p class="text-body-lg opacity-90 max-w-lg mb-xl">Your ecosystem revenue has increased by 15.2% compared to last quarter. AI predicts continued growth through Q4 based on current prospect volume.</p>
+<button class="bg-white text-primary-container px-lg py-md rounded-xl font-label-md text-label-md hover:bg-slate-100 transition-colors shadow-lg">Download Quarterly Report</button>
+</div>
+<!-- Decorative Element -->
+<div class="absolute -right-16 -bottom-16 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<!-- Quick Support Card -->
+<div class="bg-white rounded-xl p-xl border border-slate-100 soft-shadow flex flex-col gap-lg">
+<h3 class="text-h3 font-h3 font-poppins">Concierge Support</h3>
+<div class="space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full border-2 border-primary-container p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of a friendly customer success manager with a warm smile and approachable expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfrOxWhRyyqu1pUOosxIJq6xVptUzr-DUvcsT8-fWNbrmhE0BClNYJFd8R-gkvmifCgaaNtW32pt3T8UjDsT18cxAtU-4a5VYn5gZZjl3M9VAOgOUWYZjwfYI6uZ-h1Ktfi8igCmDZ3nul2VI9V4VryNBT6QrujIR97nk4ywnQIUOLjjL-3S0GIpG7sKSAxkU5OCCqhHTTvB2JfIuDahG-zMEgLP3DpvCZFKrXwtLyGEU1BLut_e3mduuwI2HJeLfIVsupY0pYs8Bt"/>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Elena Rodriguez</p>
+<p class="text-caption text-primary-container">Partner Success Manager</p>
+</div>
+</div>
+<p class="text-body-md text-secondary">Need help with onboarding new enterprise partners? Schedule a sync.</p>
+</div>
+<button class="w-full border-2 border-slate-900 text-slate-900 py-3 rounded-xl font-label-md text-label-md hover:bg-slate-900 hover:text-white transition-all">Schedule Meeting</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Only on relevant screens) -->
+<button class="fixed bottom-lg right-lg h-14 w-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:scale-110 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>

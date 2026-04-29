@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-bright": "#f9f9f9", "on-primary-container": "#004024", "secondary-fixed": "#e5e2e1", "on-secondary-container": "#636262", "secondary-fixed-dim": "#c8c6c5", "surface-container-high": "#e8e8e8", "primary-fixed-dim": "#5cde97", "surface-variant": "#e2e2e2", "on-primary-fixed-variant": "#00522f", "on-tertiary-container": "#353738", "inverse-surface": "#2f3131", primary: "#006d40", "on-secondary-fixed-variant": "#474746", "on-error": "#ffffff", "on-background": "#1a1c1c", "surface-container-highest": "#e2e2e2", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "surface-tint": "#006d40", "outline-variant": "#bccabd", "tertiary-container": "#9fa0a0", "primary-fixed": "#7afbb1", "on-surface": "#1a1c1c", "on-tertiary-fixed": "#1a1c1c", "on-surface-variant": "#3d4a40", "tertiary-fixed-dim": "#c6c6c7", "on-error-container": "#93000a", "secondary-container": "#e2dfde", surface: "#f9f9f9", "on-secondary-fixed": "#1b1b1c", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "error-container": "#ffdad6", "surface-container": "#eeeeee", "surface-container-low": "#f3f3f3", "inverse-primary": "#5cde97", "on-tertiary-fixed-variant": "#454747", tertiary: "#5d5f5f", "inverse-on-surface": "#f1f1f1", "surface-dim": "#dadada", "tertiary-fixed": "#e2e2e2", outline: "#6d7a6f", error: "#ba1a1a", secondary: "#5f5e5e", "primary-container": "#2bb673", "on-primary-fixed": "#002110", background: "#f9f9f9"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {sm: "12px", base: "8px", xs: "4px", md: "16px", xl: "32px", "margin-mobile": "20px", "margin-desktop": "40px", gutter: "16px", lg: "24px"}, fontFamily: {h3: ["Inter"], h2: ["Inter"], caption: ["Inter"], "body-md": ["Inter"], h1: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #F5F5F5;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background bg-background selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="bg-white/90 dark:bg-gray-900/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-gray-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center h-16 px-5 max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tighter text-emerald-600 dark:text-emerald-400">MyBestEvents</div>
+<div class="hidden md:flex items-center gap-xl">
+<nav class="flex gap-lg">
+<a class="text-gray-500 dark:text-gray-400 font-sans antialiased text-sm tracking-tight hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors px-3 py-2 rounded-lg" href="#">Home</a>
+<a class="text-gray-500 dark:text-gray-400 font-sans antialiased text-sm tracking-tight hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors px-3 py-2 rounded-lg" href="#">Explore</a>
+<a class="text-emerald-600 dark:text-emerald-400 font-semibold font-sans antialiased text-sm tracking-tight px-3 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/20" href="#">Saved</a>
+</nav>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 transition-transform" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer active:scale-95 transition-transform" data-icon="settings">settings</span>
+</div>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+<!-- Hero Section / Title -->
+<section class="mb-xl">
+<h1 class="font-h1 text-h1 text-on-background mb-xs">Saved Favorites</h1>
+<p class="font-body-lg text-body-lg text-secondary">Your curated collection of partners and upcoming events.</p>
+</section>
+<!-- Category Toggle / Filter Chips -->
+<div class="flex gap-md mb-lg overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-lg py-sm rounded-full bg-on-background text-surface-lowest font-label-md text-label-md transition-all">All Saved</button>
+<button class="px-lg py-sm rounded-full bg-surface-container-high text-secondary font-label-md text-label-md hover:bg-secondary-container transition-all">Partners</button>
+<button class="px-lg py-sm rounded-full bg-surface-container-high text-secondary font-label-md text-label-md hover:bg-secondary-container transition-all">Events</button>
+<button class="px-lg py-sm rounded-full bg-surface-container-high text-secondary font-label-md text-label-md hover:bg-secondary-container transition-all">Past Events</button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Partners Section Header -->
+<div class="md:col-span-12 flex justify-between items-end mt-base">
+<h2 class="font-h2 text-h2 text-on-background">Featured Partners</h2>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">View All</a>
+</div>
+<!-- Partner Card 1 (Large Bento) -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex flex-col md:flex-row group transition-all hover:shadow-lg">
+<div class="md:w-1/2 h-64 md:h-auto relative overflow-hidden">
+<img alt="Grand Hall Estates" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="luxury event venue interior with crystal chandeliers and elegant floral arrangements in a high-end ballroom setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtxEhzDSDinGilVEG0mAbt8EeUUjThNsoCvJxv5xodHO62nkNstVpYG2L2Sa-zFTM6cqiLM2chsFOp3gfSrXfqS60vRQwhkQ-DAl9oyqkZRgnOlVq6wJO8VdzBtFUQG-3CEvqunwHjXxDeMxd1atXclYUv2pI_9mzAy3GOwyhZhNY6bLh9DzPKhtt2YOobpUf5IF6ehcwxf7cgmf2fAoPJa1IXUR1Zp7ZsvmsmKnAmw2XJa0vn89iiwNNA3zvxk5PspGpPg04eBAIp"/>
+<div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-primary" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-lg md:w-1/2 flex flex-col justify-center">
+<div class="flex items-center gap-xs text-primary mb-xs">
+<span class="material-symbols-outlined text-[18px]" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-md text-caption uppercase tracking-wider">Top Rated Partner</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-background mb-sm">Grand Hall Estates</h3>
+<p class="text-secondary font-body-md text-body-md mb-md line-clamp-3">The premier destination for botanical weddings and corporate retreats. Offering full-service catering and bespoke decor services.</p>
+<div class="flex items-center gap-md">
+<span class="flex items-center gap-xs font-caption text-caption text-secondary">
+<span class="material-symbols-outlined text-[16px]" data-icon="location_on">location_on</span> Napa Valley
+                        </span>
+<span class="flex items-center gap-xs font-caption text-caption text-secondary">
+<span class="material-symbols-outlined text-[16px]" data-icon="group">group</span> 50-500 guests
+                        </span>
+</div>
+</div>
+</div>
+<!-- Partner Card 2 (Small) -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group transition-all hover:shadow-lg">
+<div class="h-48 relative overflow-hidden">
+<img alt="Artisan Eats Catering" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="professional catering team preparing colorful gourmet appetizers in a clean modern kitchen with natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs_9FpwmzgKj7w1wNyD4OnnMYL0geNLYrbLXkJmIKDMJeRyMstXaKTpDx0d2zQPQp7JCykvvmlkoMrKCHSfccbOn1_y_9RR_kFFOaPQr13Oi-K10KT8cTUxaikwn-voC65mrRiHanR9USPQciW-C49liEUBYpGkAvh86hojjcPT0nn0NiItohjixiRV5yuI-QXrJIh375yOyirkAcwWgbM0OShUgmoqwyg_v25zw4TX3rYDpQQliddjNGBONBanA_6xtcoy6XcvTSu"/>
+<div class="absolute top-4 right-4 bg-white/90 p-2 rounded-full shadow-md">
+<span class="material-symbols-outlined text-primary" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-h3 text-h3 text-on-background mb-xs">Artisan Eats Catering</h3>
+<p class="text-secondary font-caption text-caption mb-md">Farm-to-table culinary experiences for intimate gatherings.</p>
+<button class="w-full py-sm bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md active:scale-95 transition-transform">Book Consultation</button>
+</div>
+</div>
+<!-- Events Section Header -->
+<div class="md:col-span-12 flex justify-between items-end mt-xl">
+<h2 class="font-h2 text-h2 text-on-background">Saved Events</h2>
+<a class="text-primary font-label-md text-label-md hover:underline" href="#">Explore More</a>
+</div>
+<!-- Event Card 1 -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group transition-all hover:shadow-lg">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Summer Beats Festival" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="vibrant outdoor music festival stage at night with colorful laser lights and a crowd of happy people" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqusPuTcojRQS-jXH2PeIEynmkrwaLYfLiFr8XiHwwQb2wiTP8d5MoPErGMng5dzeDK1PskcRO_3WtOwsvVdtssgt13E5WvEefJoIUwJZyn6FK_nCn8EbeShGQYigOtzIaDvf1lGL330bdGAPQHpQz4hlvZvdEW4_crQJN-R_moZTzS0evtCWEeKgGKaJ2Ign_CFZNCE-ibtCZfUNh0Orp0in3JzGinBOw3jAXwUBZXw0V_y-MiWEQpjypGS8AMcmC9LJ719f9-f_U"/>
+<div class="absolute top-4 left-4 bg-white/95 px-sm py-xs rounded-lg flex flex-col items-center">
+<span class="text-primary font-bold text-lg">14</span>
+<span class="text-secondary font-label-md text-[10px] uppercase">Aug</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-h3 text-body-lg font-bold text-on-background mb-xs">Summer Beats Festival</h3>
+<div class="flex items-center gap-xs text-secondary font-caption text-caption mb-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 18:00 • Central Park
+                    </div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$45.00</span>
+<button class="p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group transition-all hover:shadow-lg">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Vintage Wine Gala" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="sophisticated wine tasting event in an old cellar with wooden barrels and flickering candles on the table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpHxQ_siMBMLoHAg2fjISK7rtT3xmf62aJzSIh1DP7En3_a9Apuyz0Axm1e9bsGq3qmJ_JtcUGmZzUYpllSUK5UAKuMHifO7C9McGDCCSxIMBChlXgRiLYaQ2EtuF42IPt1SB5NGT7ljZc0r_Hm26azez6cqgo1hHuIKY4y-yFSxmPqP6mQ3a3sczat-uzEHTnVwfCIyDfcPyno6ZnGH4oT3JMG4z5cC_aj0BNr-omyyku2XPVVSRc96kSlwXrrJoWUv1v8Ge_MLGr"/>
+<div class="absolute top-4 left-4 bg-white/95 px-sm py-xs rounded-lg flex flex-col items-center">
+<span class="text-primary font-bold text-lg">22</span>
+<span class="text-secondary font-label-md text-[10px] uppercase">Sep</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-h3 text-body-lg font-bold text-on-background mb-xs">Vintage Wine Gala</h3>
+<div class="flex items-center gap-xs text-secondary font-caption text-caption mb-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 19:30 • The Cellar
+                    </div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">$120.00</span>
+<button class="p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] group transition-all hover:shadow-lg">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Tech Innovate 2024" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="dynamic business conference speaker on a stage with a large digital screen background in a modern auditorium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0rmeez5sDkgmATUltVpOekZ0tMicU4beBoPR6PVEiW9Zj6M02AqKmf1cMq9rouT4MNLRbbAAt_1Wj5XmvWCVkDUOzVyXIljKMTvHQPGP-uFxJQUh4J-dUmpJTW61PJhtKpEecEet5AVvpsokJFLJDu6MJhUHrCabCuie_nNTPStX_rWw5XhadOZG9lKwxbEZqEGB3HScFFyhJDdpTHzp07yZ2q2vwM6_KIRuUw3g2Bnn6OjjqVnEDojMUjJJJdCJy_nXE3-ESh1CL"/>
+<div class="absolute top-4 left-4 bg-white/95 px-sm py-xs rounded-lg flex flex-col items-center">
+<span class="text-primary font-bold text-lg">05</span>
+<span class="text-secondary font-label-md text-[10px] uppercase">Oct</span>
+</div>
+</div>
+<div class="p-md">
+<h3 class="font-h3 text-body-lg font-bold text-on-background mb-xs">Tech Innovate 2024</h3>
+<div class="flex items-center gap-xs text-secondary font-caption text-caption mb-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 09:00 • Tech Hub
+                    </div>
+<div class="flex justify-between items-center">
+<span class="text-primary font-bold">Free</span>
+<button class="p-sm rounded-lg border border-outline-variant hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-secondary" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pt-2 pb-6 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] z-50 rounded-t-3xl">
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="travel_explore">travel_explore</span>
+<span class="text-[10px] font-medium tracking-wide uppercase mt-1">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="text-[10px] font-medium tracking-wide uppercase mt-1">Map</span>
+</div>
+<div class="flex flex-col items-center justify-center text-emerald-600 dark:text-emerald-400 bg-emerald-50/50 dark:bg-emerald-900/20 rounded-xl px-3 py-1 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-[10px] font-medium tracking-wide uppercase mt-1">Saved</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 tap-highlight-transparent active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

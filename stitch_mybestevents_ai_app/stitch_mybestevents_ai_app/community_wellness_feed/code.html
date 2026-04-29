@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-tint": "#006d40", "primary-fixed-dim": "#5cde97", "on-secondary-fixed": "#1b1b1c", "on-tertiary-fixed": "#1a1c1c", surface: "#f9f9f9", "secondary-container": "#e2dfde", "secondary-fixed": "#e5e2e1", "on-background": "#1a1c1c", "on-primary-fixed-variant": "#00522f", "surface-variant": "#e2e2e2", "tertiary-fixed-dim": "#c6c6c7", "inverse-surface": "#2f3131", "inverse-on-surface": "#f1f1f1", "inverse-primary": "#5cde97", "error-container": "#ffdad6", secondary: "#5f5e5e", background: "#f9f9f9", "surface-dim": "#dadada", "surface-container": "#eeeeee", "secondary-fixed-dim": "#c8c6c5", "on-tertiary-fixed-variant": "#454747", "on-tertiary": "#ffffff", "on-primary": "#ffffff", "primary-fixed": "#7afbb1", "tertiary-container": "#9fa0a0", "surface-container-lowest": "#ffffff", "primary-container": "#2bb673", "outline-variant": "#bccabd", "surface-container-highest": "#e2e2e2", "on-primary-fixed": "#002110", outline: "#6d7a6f", "on-surface-variant": "#3d4a40", "on-primary-container": "#004024", "tertiary-fixed": "#e2e2e2", "surface-container-low": "#f3f3f3", "on-error-container": "#93000a", "surface-container-high": "#e8e8e8", "on-surface": "#1a1c1c", primary: "#006d40", "on-error": "#ffffff", "surface-bright": "#f9f9f9", "on-secondary": "#ffffff", "on-tertiary-container": "#353738", "on-secondary-container": "#636262", tertiary: "#5d5f5f", "on-secondary-fixed-variant": "#474746", error: "#ba1a1a"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"margin-mobile": "20px", xs: "4px", gutter: "16px", md: "16px", lg: "24px", "margin-desktop": "40px", sm: "12px", xl: "32px", base: "8px"}, fontFamily: {caption: ["Inter"], h3: ["Inter"], h2: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], h1: ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm docked full-width top-0 z-50 flex justify-between items-center w-full px-5 py-3 sticky">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold tracking-tight text-gray-900 dark:text-white font-inter">Vitality</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">notifications</span>
+</button>
+<button class="hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors p-2 rounded-full">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400">account_circle</span>
+</button>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-margin-mobile md:px-0 py-lg space-y-lg pb-32">
+<!-- Search & Discovery -->
+<section class="space-y-md">
+<div class="relative">
+<input class="w-full h-14 pl-12 pr-4 bg-white border border-outline-variant rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] focus:ring-primary focus:border-primary transition-all" placeholder="Search wellness moments in Occitanie..." type="text"/>
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary">search</span>
+</div>
+<div class="flex gap-sm overflow-x-auto hide-scrollbar py-1">
+<button class="px-6 py-2 rounded-full bg-on-background text-white whitespace-nowrap font-label-md text-label-md">Trending</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface border border-outline-variant whitespace-nowrap font-label-md text-label-md hover:bg-surface-variant transition-colors">Yoga Retreats</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface border border-outline-variant whitespace-nowrap font-label-md text-label-md hover:bg-surface-variant transition-colors">Spa &amp; Thalasso</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface border border-outline-variant whitespace-nowrap font-label-md text-label-md hover:bg-surface-variant transition-colors">Nature Walks</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface border border-outline-variant whitespace-nowrap font-label-md text-label-md hover:bg-surface-variant transition-colors">Meditation</button>
+</div>
+</section>
+<!-- Social Feed -->
+<section class="space-y-xl">
+<!-- Post 1: Influencer Highlight -->
+<article class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between p-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container p-0.5 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover rounded-full" data-alt="portrait of a professional wellness coach smiling softly with natural warm lighting and a soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxl3NvkTzWls0hJ6_AXwQ-EoE6uBUFwQaHPtPS7kzTBj-qSyKD0nN_MkYuYR1KI2hA0wCYy5HcLMXdcE0WI1xXl1Hn6haGtcPWlZdTlFMpx4QvuXNvyDRpgeRqjW5qOVIAzE1BIJpEi07lKfCaCWilueCGjquhZxHaPwHVgYUD6CVeBhX0jgsRJwK_ZzWfIbHNQBrg_Vs_jueWF7T2vKsoj7XA2LGzwrRRrpzPLyQnMg56JED6oFt8XEMctf-oSW4QdnET8uFb8S_p"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background leading-none">Camille_Wellness</p>
+<p class="font-caption text-caption text-secondary">Montpellier, Occitanie</p>
+</div>
+</div>
+<button class="text-secondary hover:text-on-background"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="relative aspect-[4/5] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="serene woman practicing yoga on a sun-drenched terrace overlooking the vineyards of the Languedoc region at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwmOOjv2ra2eMVFBDlBxbN-YREO0TmdryhDweuC2oCqx_ekhm0BFOvcA3t9cB6vbhYYJVN1RgXru8-B_qiqxSBrh89Zbci4w88QC8dQYrXB49_lXES7FZQI5Haof2rlXup4EEPdA48yTDhmy3e6BTv0WfGH-31w_cGw6rqNbB2bsUEYwr3Ry6W4v6rI6uQzKvf4ad6v4Pqov1XMCEDR9rKSZMC0wR4B57i7s8zSngUsM4kkYhX4kfzQt-AkxKnDMFdTT0y1QmynnXM"/>
+<div class="absolute top-4 right-4 bg-black/40 backdrop-blur-sm text-white px-3 py-1 rounded-full text-caption flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">play_circle</span> 0:15
+                    </div>
+</div>
+<div class="p-md space-y-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 group">
+<span class="material-symbols-outlined text-red-500 transition-transform group-active:scale-125" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md">1.2k</span>
+</button>
+<button class="flex items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary">chat_bubble</span>
+<span class="font-label-md text-label-md">48</span>
+</button>
+<button class="flex items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary">share</span>
+</button>
+</div>
+<button class="flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary">bookmark</span>
+</button>
+</div>
+<div class="space-y-xs">
+<p class="font-body-md text-body-md"><span class="font-bold">Camille_Wellness</span> This sunrise session in the heart of Herault changed my perspective on morning routines. ✨ #WellnessOccitanie #YogaFlow</p>
+</div>
+<a class="block w-full py-4 bg-primary-container text-on-primary-container text-center rounded-xl font-label-md text-label-md hover:opacity-90 active:scale-[0.98] transition-all shadow-[0px_4px_12px_rgba(43,182,115,0.2)]" href="#">
+                        Book this experience
+                    </a>
+</div>
+</article>
+<!-- Post 2: Local Discovery -->
+<article class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between p-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border border-outline-variant p-0.5 overflow-hidden bg-surface-container">
+<img alt="Profile" class="w-full h-full object-cover rounded-full" data-alt="vibrant lifestyle portrait of a young woman laughing in a field of wild lavender in southern France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSwpNq4yd0zJRNihodZzCMyfd0QUb0zMDB8qwTWDo7yIN2pEPguaR8hv2FRFzi6fTyRPAabKeS-_F6NhNsqVGT_WFYHlQhOdCuT6sypusqzz77ZBcWFJUAY_I9TavEDXTWOkmc2eX1KPZspwdkY3sQN9E9pnISV-Tjo9cH0yiHzq4nIDg3pnfJ5JpfOWHXp7qgzIInDj160V_b0w15DqBIzVnQbOlAvEmGKcm3aFToMt5jk-8PVLiJdb5een6c9zATfHAuPVPO52wv"/>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-background leading-none">NatureLover34</p>
+<p class="font-caption text-caption text-secondary">Gorges du Tarn</p>
+</div>
+</div>
+<button class="text-secondary"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<div class="relative aspect-video bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="panoramic landscape view of a crystal clear turquoise river flowing through limestone canyons in the Gorges du Tarn during midday sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaFA29_jXpZ_yhGhuLhSFnnY5jfBSFBG9c45UOEGO83Wj-Sx9ZTByzdgNOzrblzeArjzWA4k7s97g4qUKACJgV4FLAhgyaFYkZp2or-GgXPlcr7msQzJo1MOPGVDCrHUrjkcD5nIOArOwBG_6SdSJDznnb_eEeSR4kJKPzVMRplh6ajNXMUySo4i_-Uh6EDMSZwO3Cpaspsu82hyOD-fqlJGMAiXRvAFuYmoA30h3CJXKuPIHEsALj44UXeCC7wkWdmRPOdM_PDn7C"/>
+</div>
+<div class="p-md space-y-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary hover:text-red-500 transition-colors">favorite</span>
+<span class="font-label-md text-label-md">856</span>
+</button>
+<button class="flex items-center gap-1 group">
+<span class="material-symbols-outlined text-secondary">chat_bubble</span>
+<span class="font-label-md text-label-md">12</span>
+</button>
+</div>
+<button><span class="material-symbols-outlined text-secondary">bookmark</span></button>
+</div>
+<p class="font-body-md text-body-md"><span class="font-bold">NatureLover34</span> Found the perfect spot for forest bathing today. The air here is just different. 🌿 #OccitanieSecrets</p>
+<a class="block w-full py-4 bg-primary-container text-on-primary-container text-center rounded-xl font-label-md text-label-md hover:opacity-90 active:scale-[0.98] transition-all shadow-[0px_4px_12px_rgba(43,182,115,0.2)]" href="#">
+                        Explore Guided Hikes
+                    </a>
+</div>
+</article>
+<!-- Post 3: Bento Style Engagement -->
+<div class="grid grid-cols-2 gap-gutter">
+<div class="bg-white p-lg rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center text-center space-y-2">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">local_fire_department</span>
+</div>
+<p class="font-h3 text-h3">15k</p>
+<p class="font-caption text-caption text-secondary">Daily Active Users in Occitanie</p>
+</div>
+<div class="bg-white p-lg rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex flex-col items-center justify-center text-center space-y-2">
+<div class="w-12 h-12 bg-surface-tint/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-tint">verified</span>
+</div>
+<p class="font-h3 text-h3">240+</p>
+<p class="font-caption text-caption text-secondary">Verified Coaches</p>
+</div>
+</div>
+<!-- Post 4: User Story Carousel -->
+<article class="bg-white rounded-xl p-md shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between mb-md">
+<h3 class="font-h3 text-h3">Weekly Highlights</h3>
+<button class="text-primary font-label-md text-label-md">View all</button>
+</div>
+<div class="flex gap-md overflow-x-auto hide-scrollbar -mx-md px-md">
+<div class="min-w-[140px] flex-shrink-0 group relative overflow-hidden rounded-xl aspect-[2/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="close-up of colorful healthy fruit bowl and fresh smoothie at an outdoor cafe in Toulouse during golden hour" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIrqidRrsMYwCL-lGJq7GdOUHfydtk0xSb9mSyCLeWGflpuRxWWtpHwlXrMKHYABEBEY4aXzP3AykHscyQszErcQ44hayOnHoIAqhb4W77h7UkoPcU4Kl54Khkp5d4jgE8DYwyHnRYZTFD_o9jNno9h2hWMW8esELSjfMvRP0J314xXeyrbWhSI_bWdgaeC9ZrgRAdXv14Z0emcFhSKFjowgXum_R9m3_ADeprQtAWMkhS6jgcKRBIGwASZI5RlztYq3TTLOdej2Hl"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<p class="absolute bottom-3 left-3 text-white font-label-md text-caption">Healthy Eats</p>
+</div>
+<div class="min-w-[140px] flex-shrink-0 group relative overflow-hidden rounded-xl aspect-[2/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="group of people meditating outdoors in a peaceful garden setting with mountains in the distance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtrzvbzftHY8jWuws3YAVYWmVHaPhSfgM_HRDwDlWOImpOsRi-qWVCEEVILgosh_LnzKYjzHEMipxFPSyVLawuedann-oEKa-2_vlni3IIkytJ9Txn83JmPHMZB7SnG8rMEDuul3iK-3CpkDINBFxn-Xi77sJR13OgqCkW-m_ti9rWpckQxyCrvJKLv3PUZhD0JzqZW6Sr02BzOVRCd-rBq-8KpR8dNZ9oM9VxlXI3q6eHZwqYv_XIByFDJOTz2Dmoed05awfdmAJG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<p class="absolute bottom-3 left-3 text-white font-label-md text-caption">Group Zen</p>
+</div>
+<div class="min-w-[140px] flex-shrink-0 group relative overflow-hidden rounded-xl aspect-[2/3]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="steamy outdoor pool of a thermal spa at night with soft blue lighting and a calm atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRwP6kW_YV3OEmUcXU-s_FMclhuoXr471MpyQq7yV2mcMLNUNxGCnf6SgzkcIp-XvzdW5k1mA8PEVOM1_Mit2wKzjeZ8HdY_uW3tsq0rtN7XQ4kfOikpanquOuz3cQ3-Vtn3dUI-e36eCcRT96JAnwWpI3NbOAd6y2vJTgpTRUDsjwHHDe7Tx7T0O8DDnkGuyKWeot9MfSoOBQ0et8YKaj884bcWjt7ps001YpRnBtsU3Gl49PpPYUiiMhKh-1awXSgHzmVDfLmy_h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<p class="absolute bottom-3 left-3 text-white font-label-md text-caption">Night Spa</p>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-5 w-14 h-14 bg-primary-container text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 600;">add</span>
+</button>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_20px_rgba(0,0,0,0.03)] flex justify-around items-center px-4 pt-3 pb-8">
+<button class="flex flex-col items-center justify-center text-emerald-600 dark:text-emerald-400 transition-all duration-300 scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome_motion</span>
+<span class="text-[11px] font-medium font-inter">Feed</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="text-[11px] font-medium font-inter">Coach</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[11px] font-medium font-inter">Market</span>
+</button>
+<button class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 hover:text-emerald-500 dark:hover:text-emerald-300 transition-colors">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium font-inter">Profile</span>
+</button>
+</nav>
+</body></html>

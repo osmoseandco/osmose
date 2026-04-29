@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-tertiary-fixed": "#1a1c1c", "outline-variant": "#bccabd", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", secondary: "#5f5e5e", "on-background": "#1a1c1c", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "on-secondary": "#ffffff", "on-primary-fixed": "#002110", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", outline: "#6d7a6f", "on-error-container": "#93000a", error: "#ba1a1a", "primary-container": "#2bb673", "on-surface-variant": "#3d4a40", "on-surface": "#1a1c1c", "error-container": "#ffdad6", "on-secondary-container": "#636262", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", background: "#f9f9f9", "surface-bright": "#f9f9f9", tertiary: "#5d5f5f", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-low": "#f3f3f3", primary: "#006d40", "on-tertiary": "#ffffff", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", surface: "#f9f9f9", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-container": "#353738", "inverse-surface": "#2f3131", "primary-fixed": "#7afbb1"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {base: "8px", xl: "32px", "margin-desktop": "40px", lg: "24px", gutter: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", md: "16px"}, fontFamily: {h3: ["Inter"], h2: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], caption: ["Inter"], "body-lg": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tap-highlight-transparent {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #bccabd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center h-16 px-5 md:px-10 max-w-7xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="text-xl font-bold tracking-tight text-[#1E1E1E] dark:text-white font-h2">Zenith Wellness</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6">
+<a class="text-[#2BB673] border-b-2 border-[#2BB673] pb-1 font-label-md" href="#">Explorateur</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E1E1E] dark:hover:text-white transition-colors font-label-md" href="#">Agenda</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E1E1E] dark:hover:text-white transition-colors font-label-md" href="#">Favoris</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 p-2 hover:bg-slate-50 rounded-full transition-all" data-icon="calendar_today">calendar_today</button>
+<button class="material-symbols-outlined text-slate-500 p-2 hover:bg-slate-50 rounded-full transition-all" data-icon="notifications">notifications</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-slate-200">
+<img alt="User profile" data-alt="professional headshot of a smiling woman with clear skin and natural lighting in a soft office setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPptR4wezFjrYg1cT10dxyUPj6T66du3zSrexXhVzRPfIfw_IyU5xt4hD6QRbajWLjh3zy46hGzAl5rvl3xwwf_HipEYCHecYJVmSdfEGDU2T8B0qsRwCayWhv6H4EbD-VgLlr5NsVcox08033qIJfgZp8Lm2f-Bwbu4rkCnlpe_fA6WFI3tJuGrwzgrtMESrVkbGBqW_NaqcjsDhfstN1uCEyEXFd6OiiWbfzwiIl2iKjYySXrtK1R0avY6c1qhJXMEm8McrhDPWS"/>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-5 md:px-10 max-w-7xl mx-auto">
+<section class="mb-xl">
+<div class="flex flex-col gap-xs mb-lg">
+<h1 class="font-h1 text-h1 text-on-surface">Trouvez votre équilibre</h1>
+<p class="text-secondary font-body-lg">Recherche avancée basée sur votre état d'esprit</p>
+</div>
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] p-md md:p-lg space-y-lg border border-slate-100">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-secondary" data-icon="search">search</span>
+<input class="w-full pl-12 pr-4 py-4 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary-container focus:border-transparent outline-none transition-all font-body-md" placeholder="Quelle activité recherchez-vous ?" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="psychology">psychology</span>
+                            Humeur du moment
+                        </label>
+<div class="flex flex-wrap gap-xs">
+<button class="px-md py-xs rounded-full bg-on-background text-white text-caption font-label-md border border-on-background">Stressé</button>
+<button class="px-md py-xs rounded-full bg-surface-container text-secondary text-caption font-label-md border border-transparent hover:border-slate-300 transition-all">Énergique</button>
+<button class="px-md py-xs rounded-full bg-surface-container text-secondary text-caption font-label-md border border-transparent hover:border-slate-300 transition-all">Zen</button>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+                            Budget max
+                        </label>
+<div class="pt-4">
+<input class="w-full h-1.5 bg-surface-variant rounded-lg appearance-none cursor-pointer accent-primary-container" max="200" min="0" type="range" value="75"/>
+<div class="flex justify-between mt-2 text-caption text-secondary">
+<span>0€</span>
+<span class="font-bold text-on-surface">75€</span>
+<span>200€+</span>
+</div>
+</div>
+</div>
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="near_me">near_me</span>
+                            Distance
+                        </label>
+<select class="w-full p-2.5 rounded-lg border border-slate-200 font-body-md text-on-surface outline-none focus:ring-2 focus:ring-primary-container">
+<option>Autour de moi (5km)</option>
+<option>Ville entière</option>
+<option>Région</option>
+</select>
+</div>
+<div class="space-y-sm">
+<label class="font-label-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+                            Temps disponible
+                        </label>
+<div class="flex gap-2">
+<button class="flex-1 py-2.5 rounded-lg border border-slate-200 text-caption font-label-md hover:bg-slate-50 transition-all">-45 min</button>
+<button class="flex-1 py-2.5 rounded-lg border border-primary-container bg-emerald-50 text-primary text-caption font-label-md">1h - 2h</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-center mb-lg">
+<h2 class="font-h2 text-h2 text-on-surface">Recommandations IA pour vous</h2>
+<div class="flex items-center gap-2 text-primary font-label-md cursor-pointer hover:underline">
+<span>Voir sur la carte</span>
+<span class="material-symbols-outlined text-sm" data-icon="map">map</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+<div class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col group">
+<div class="aspect-[16/9] relative overflow-hidden">
+<img alt="Yoga session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="serene yoga instructor in a bright white studio with soft morning light and minimalist plants in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYe_Kg-k1TN7NFwMWl9-Fwg2si-iRFjcxPZYeRHxE7fWWMVxqRSWbIpwNdbcFm-cdbz4aVhhvUPlWWIsa4OsXxq5y3wAoEUHSk9Znm_BaZrWjWsNH8-9ZD3A8UwVynVSm1p_9fgs-6VCXl6ZunDDc8Xe_fY-u-ECjsGkk_cjYw5L_nYO7swM7vQ0uCuAMTfpI0lzFz0vBl9-HL6mNgcO5gOsJV9G_8IP7wSCh8zoerL_A6LZecz5hyM9k_BHVn6i2GoRubzYZLFcZB"/>
+<div class="absolute top-4 right-4 bg-[#2BB673] text-white px-3 py-1 rounded-full text-caption font-bold flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome" data-weight="fill">auto_awesome</span>
+                            Score IA 98%
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Yoga Vinyasa Détox</h3>
+<span class="text-primary font-bold">45€</span>
+</div>
+<p class="text-secondary text-caption mb-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                            Studio Équilibre, 1.2km
+                        </p>
+<div class="flex gap-2 mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Zen</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">60 MIN</span>
+</div>
+<button class="mt-auto w-full py-3 bg-primary-container text-white rounded-lg font-label-md active:scale-95 transition-all">Réserver maintenant</button>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col group">
+<div class="aspect-[16/9] relative overflow-hidden">
+<img alt="Meditation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="calm person meditating in a dimly lit room with warm candlelight and soft incense smoke textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd1TjwUv_9ICzM3TBmCWIdZEe90Bj9xvT7-yn8Dc01tCgYo9NzdSeZu_5C0gEHCis6wnVIUPm9VjNCxuYwlMLhLvP12vfxTXtiMsK9QxzNkWjUrcTO3xIfnDo_h3FPuyBu4b5kXWpJ_Bq-ZPsrFt0Z-QoUyLuk9v0UNOjjpD9XrT3UjIgBsDHgs_l0V50wPcw3_GqrMwXf8WHfuz4Kd5UD44WkTJyrqT0yhr0lalYAHuIl0zW1FZIRD4VtA1fCwoCSn0mnhtfbhiIG"/>
+<div class="absolute top-4 right-4 bg-[#2BB673] text-white px-3 py-1 rounded-full text-caption font-bold flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome" data-weight="fill">auto_awesome</span>
+                            Score IA 92%
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h3 text-h3 text-on-surface">Bain Sonore Tibétain</h3>
+<span class="text-primary font-bold">35€</span>
+</div>
+<p class="text-secondary text-caption mb-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                            L'Atelier Zen, 0.8km
+                        </p>
+<div class="flex gap-2 mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Stressé</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">45 MIN</span>
+</div>
+<button class="mt-auto w-full py-3 bg-primary-container text-white rounded-lg font-label-md active:scale-95 transition-all">Réserver maintenant</button>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 flex flex-col group">
+<div class="aspect-[16/9] relative overflow-hidden">
+<img alt="High intensity training" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="powerful athlete doing heavy ropes workout in a dark industrial gym with dramatic blue and orange lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9LPHGq_Z3golSrsErO-_63lUjhMr7XbHIFG_xGlIN9p0nZcwsNH3pE2lt3nSwVoKisqB71lxzdtRdB6CSfaZhaprNQJoGanPT0uYIeXLYmQZo9xVIU_VbiwsznHDM7vJQDMRS1XhQ1yq-qxHyFmGUMs3zsKNkGvEzKl8vUDBP3ULKbhZu2iu8tN10orJEn5Q3yhr3UQ8bPSNeXmjhInuaV8cYXOdQ-omGHs1S9G-CVfnrXnsZGPhSlmMoelDqhhlQWS998q9zMpIj"/>
+<div class="absolute top-4 right-4 bg-[#2BB673] text-white px-3 py-1 rounded-full text-caption font-bold flex items-center gap-1 shadow-lg">
+<span class="material-symbols-outlined text-sm" data-icon="auto_awesome" data-weight="fill">auto_awesome</span>
+                            Score IA 85%
+                        </div>
+</div>
+<div class="p-md flex flex-col flex-1">
+<div class="flex justify-between items-start mb-xs">
+<h3 class="font-h3 text-h3 text-on-surface">HIIT Power Blast</h3>
+<span class="text-primary font-bold">25€</span>
+</div>
+<p class="text-secondary text-caption mb-md flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span>
+                            Energize Gym, 2.5km
+                        </p>
+<div class="flex gap-2 mb-md">
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">Energique</span>
+<span class="bg-surface-container-low text-on-surface-variant px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider">30 MIN</span>
+</div>
+<button class="mt-auto w-full py-3 bg-primary-container text-white rounded-lg font-label-md active:scale-95 transition-all">Réserver maintenant</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="w-full py-12 mt-24 border-t border-slate-200 dark:border-slate-800 bg-[#F5F5F5] dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-bold text-[#1E1E1E] dark:text-white font-h3">Zenith Wellness</span>
+<p class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400">© 2024 Zenith Wellness. Conciergerie Bien-être.</p>
+</div>
+<div class="flex gap-6">
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4" href="#">À propos</a>
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4" href="#">Mentions légales</a>
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4" href="#">Devenir Partenaire</a>
+<a class="text-sm font-['Inter'] text-slate-500 hover:text-[#2BB673] transition-colors underline underline-offset-4" href="#">Aide</a>
+</div>
+</div>
+</footer>
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary-container text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] active:scale-90 transition-all z-40 md:bottom-10">
+<span class="material-symbols-outlined text-2xl" data-icon="filter_alt">filter_alt</span>
+</button>
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-4 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#2BB673] font-semibold transition-transform tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium font-['Inter']">Explorateur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-transform tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[11px] font-medium font-['Inter']">Favoris</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-transform tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="text-[11px] font-medium font-['Inter']">Agenda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 transition-transform tap-highlight-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="text-[11px] font-medium font-['Inter']">Profil</span>
+</a>
+</nav>
+</body></html>

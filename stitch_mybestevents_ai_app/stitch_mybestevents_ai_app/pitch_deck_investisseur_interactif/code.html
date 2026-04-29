@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {surface: "#f9f9f9", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "primary-fixed": "#7afbb1", "inverse-surface": "#2f3131", "on-tertiary-container": "#353738", "tertiary-fixed-dim": "#c6c6c7", tertiary: "#5d5f5f", "surface-bright": "#f9f9f9", primary: "#006d40", "surface-container-low": "#f3f3f3", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "on-surface": "#1a1c1c", "on-surface-variant": "#3d4a40", "primary-container": "#2bb673", "on-error-container": "#93000a", error: "#ba1a1a", outline: "#6d7a6f", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", "on-primary-fixed": "#002110", background: "#f9f9f9", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", "on-secondary-container": "#636262", "error-container": "#ffdad6", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "outline-variant": "#bccabd", "on-tertiary-fixed": "#1a1c1c", "surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#474746", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-background": "#1a1c1c", secondary: "#5f5e5e"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", "margin-desktop": "40px", lg: "24px", gutter: "16px", base: "8px", xl: "32px"}, fontFamily: {caption: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], h3: ["Inter"], h2: ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b bg-white/80 backdrop-blur-md border-gray-100 shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex items-center justify-between px-8 h-16 max-w-[1440px] mx-auto font-['Inter'] antialiased">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-gray-900">Zenith Market</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-[#2BB673] border-b-2 border-[#2BB673] pb-1 font-semibold" href="#">Performance</a>
+<a class="text-gray-500 font-medium hover:text-gray-900 transition-colors duration-200" href="#">Partners</a>
+<a class="text-gray-500 font-medium hover:text-gray-900 transition-colors duration-200" href="#">Strategy</a>
+<a class="text-gray-500 font-medium hover:text-gray-900 transition-colors duration-200" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-gray-500 p-2 hover:bg-gray-50 rounded-full transition-colors">notifications</button>
+<button class="material-symbols-outlined text-gray-500 p-2 hover:bg-gray-50 rounded-full transition-colors">settings</button>
+<button class="bg-primary-container text-on-primary px-6 py-2 rounded-full font-label-md active:scale-95 transition-transform">Invest Now</button>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden bg-white">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-10" data-alt="Modern minimalist wellness studio with large windows, soft natural morning light, and lush green plants in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqb7LdVJiqpfQslgHcggg0fgbljxoDFqN5AxpZJgAn-qAlSgJzuiYUlT_9t_LWa98PmrKV1AY8i7lf-h-9Qur4C4Mhsr0gerdNO1J2H4jv7ekX8rlIb5wDNfBKJPXpTP8CuZnXklNqeWI-KLTTscIhyXV8ftFxP61hZm2REdBVsU7ec9z5rAZGytIdlRLx-87Uogh8yRlom86aY3r_hIlNDLOLuEX5gHvwzutXQgmMRmcRsfdljABSbVIO4WopEiLfHIDjB7zHrItN"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 md:px-margin-desktop relative z-10 grid md:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-primary-container/10 text-primary rounded-full font-label-md">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Série A • Opportunité d'investissement</span>
+</div>
+<h1 class="font-h1 text-6xl md:text-7xl leading-tight">L'IA du <span class="text-primary-container">bien-être</span> local.</h1>
+<p class="font-body-lg text-secondary max-w-lg">
+                        MyBestEvents révolutionne l'accès aux activités de santé et de bien-être grâce à une intelligence artificielle prédictive qui connecte les citadins aux meilleurs experts régionaux.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-full font-label-md text-lg shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:translate-y-[-2px] transition-all">Investir maintenant</button>
+<button class="border-2 border-on-surface text-on-surface px-8 py-4 rounded-full font-label-md text-lg hover:bg-surface transition-all">Consulter le Pitch Deck</button>
+</div>
+</div>
+<div class="relative">
+<div class="glass-card p-8 rounded-3xl shadow-xl space-y-6">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-secondary font-caption uppercase tracking-wider">Revenu Mensuel (MRR)</p>
+<h2 class="font-h2 text-4xl text-primary-container">€450k</h2>
+</div>
+<div class="text-right">
+<span class="text-primary font-bold text-lg flex items-center justify-end gap-1">
+<span class="material-symbols-outlined">trending_up</span> +127%
+                                </span>
+<p class="text-secondary text-xs">YoY Growth</p>
+</div>
+</div>
+<div class="h-48 w-full flex items-end gap-2">
+<div class="bg-primary-container/20 w-full rounded-t-lg h-[30%]"></div>
+<div class="bg-primary-container/30 w-full rounded-t-lg h-[45%]"></div>
+<div class="bg-primary-container/40 w-full rounded-t-lg h-[40%]"></div>
+<div class="bg-primary-container/60 w-full rounded-t-lg h-[65%]"></div>
+<div class="bg-primary-container/80 w-full rounded-t-lg h-[80%]"></div>
+<div class="bg-primary-container w-full rounded-t-lg h-full"></div>
+</div>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -right-6 glass-card p-4 rounded-2xl shadow-lg border-primary-container/20 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container">groups</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">12k+ Experts</p>
+<p class="text-xs text-secondary">Inscrits en 2024</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Regional Presence / Map -->
+<section class="py-xl bg-surface-container-low">
+<div class="container mx-auto px-8 md:px-margin-desktop">
+<div class="grid md:grid-cols-3 gap-xl items-center">
+<div class="md:col-span-1 space-y-6">
+<h2 class="font-h2 text-4xl">Maillage <span class="text-primary-container">Régional</span></h2>
+<p class="text-secondary font-body-md">
+                            Une présence stratégique dans 15 régions françaises avec une concentration forte sur les bassins urbains à fort potentiel. Notre IA optimise les recommandations selon la densité locale d'experts.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-medium">92% de satisfaction client</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">check_circle</span>
+<span class="font-medium">25% de croissance mensuelle</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-2 relative">
+<div class="bg-white p-4 rounded-3xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden aspect-[4/3] md:aspect-video">
+<img class="w-full h-full object-cover rounded-2xl grayscale opacity-40" data-alt="Abstract stylized map of France with glowing data points and network connections illustrating digital reach and regional presence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAMYIqGTtNC02yQBVfBcivmLMHLOaNWiJzAxjrq4azkEnGOLpkjJR1QsF_OdK2cgXHuEtNUi-ExlajkXPF750ezZmBbl4Z6J9X1KokI8BA4rPe0PuiNwLjPZrS37sVywSIpt_LOAldOYTpJGpTSL5nskBj8Bekofym9I7sIczY1LdwsauItguCnOhWVriLMhG4d3JK-UbPIhtTRUx8eUYK5WGkJjbAY4r7xoA63dGiWFAhwui5FBFxO2CVGWZ5C7k-9vhPAmrGKWh2"/>
+<div class="absolute inset-0 p-12 flex flex-wrap gap-4 items-center justify-center">
+<!-- Simulated Map Pin Clusters -->
+<div class="w-12 h-12 bg-primary-container text-white rounded-full flex items-center justify-center font-bold shadow-lg animate-pulse">Paris</div>
+<div class="w-10 h-10 bg-primary-container/80 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">Lyon</div>
+<div class="w-10 h-10 bg-primary-container/80 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-md">Nice</div>
+<div class="w-8 h-8 bg-primary-container/60 text-white rounded-full flex items-center justify-center text-[10px] font-bold shadow-sm">Bdx</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Business Model Section -->
+<section class="py-xl bg-white">
+<div class="container mx-auto px-8 md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-xl">
+<h2 class="font-h2 text-4xl mb-4">Un Modèle Économique <span class="text-primary-container">Scalable</span></h2>
+<p class="text-secondary">Nous combinons la récurrence des abonnements SaaS et la performance de l'apport d'affaires.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter">
+<!-- Revenue Stream 1 -->
+<div class="p-8 rounded-[2rem] border border-gray-100 bg-surface flex flex-col gap-6 hover:shadow-xl transition-shadow duration-300">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-3xl">subscriptions</span>
+</div>
+<div>
+<h3 class="font-h3 text-2xl mb-2">Abonnements Pro</h3>
+<p class="text-secondary font-body-md">SaaS pour les praticiens incluant outils de gestion, IA de matching et visibilité premium. 70% de notre CA.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-gray-200">
+<p class="text-primary font-bold text-xl">Churn &lt; 2%</p>
+<p class="text-xs text-secondary uppercase font-semibold">Taux de rétention exceptionnel</p>
+</div>
+</div>
+<!-- Revenue Stream 2 -->
+<div class="p-8 rounded-[2rem] border border-gray-100 bg-surface flex flex-col gap-6 hover:shadow-xl transition-shadow duration-300">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-3xl">payments</span>
+</div>
+<div>
+<h3 class="font-h3 text-2xl mb-2">Lead Generation</h3>
+<p class="text-secondary font-body-md">Commission de 15% sur chaque mise en relation qualifiée générée par notre moteur de recherche intelligent.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-gray-200">
+<p class="text-primary font-bold text-xl">LTV:CAC ratio 4.2x</p>
+<p class="text-xs text-secondary uppercase font-semibold">Rentabilité par client</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Traction / Bento Grid -->
+<section class="py-xl bg-surface-container-high">
+<div class="container mx-auto px-8 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-white rounded-3xl p-8 flex flex-col justify-between shadow-sm relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-h2 text-3xl mb-4">Expansion 2025</h3>
+<p class="text-secondary text-lg">Objectif : Ouverture de 5 nouveaux marchés européens dès le T3 2025.</p>
+</div>
+<img class="absolute bottom-0 right-0 w-2/3 h-2/3 object-contain opacity-20 transform translate-x-10 translate-y-10" data-alt="Close up of a financial tablet showing complex growth charts and international market data with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6h_ZQImvr2BcJsyNrt4SvIehPj9Ntg4DbOvenDOZf6h1c7N_CMLwCYxcZiRr39-abU1i2Q-8fYQvvQC8tZp0bWrrDbh7Qa-b3OX8pfpf_nkQL5gMhp5S3NHtIEea_SL20Igg51mSWkZIxPzT031aCZAd4DCbniHm6beEWK3C9Uv9I0eK4L7nGIMlbPCHLgHMOnXDYhnxuLARohHFltMCFazGtXBaxM-3tmmM4_bAMw-6sZS7V7sP6KQv74IgVqa_ZUF9K_xFpKE8h"/>
+<div class="relative z-10 pt-12">
+<div class="flex gap-4">
+<div class="px-4 py-2 bg-primary/10 rounded-xl">
+<p class="text-primary font-bold">Londres</p>
+</div>
+<div class="px-4 py-2 bg-primary/10 rounded-xl">
+<p class="text-primary font-bold">Berlin</p>
+</div>
+<div class="px-4 py-2 bg-primary/10 rounded-xl">
+<p class="text-primary font-bold">Madrid</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-primary-container text-white rounded-3xl p-8 flex flex-col justify-center items-center text-center">
+<p class="font-caption uppercase tracking-widest opacity-80 mb-2">Volume d'affaires</p>
+<h2 class="font-h1 text-6xl">12.5M€</h2>
+<p class="mt-4 font-body-md opacity-90">Transité sur la plateforme en 24 mois</p>
+</div>
+<div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">robot_2</span>
+<h4 class="font-bold">IA Propriétaire</h4>
+<p class="text-secondary text-sm">Matching à 98.4% de pertinence</p>
+</div>
+<div class="bg-white rounded-3xl p-8 shadow-sm flex flex-col justify-center">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-4">shield_with_heart</span>
+<h4 class="font-bold">Marque Forte</h4>
+<p class="text-secondary text-sm">Top 3 Wellness Apps 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl relative">
+<div class="container mx-auto px-8 md:px-margin-desktop text-center bg-inverse-surface text-white py-16 rounded-[3rem] overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20" data-alt="Stunning aerial sunset over a calm turquoise ocean with gentle waves, representing clarity and vision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoC2I49JLYPLlU2fIGEmWRkQKH9C7fIoNiGsLrVZjh0WfiBYAd2pABesl4dHQ-DXS3Ge3LpAXlGJv0f-K8SUQEx6gRxI2WpJTPAKUo8-mHnKbTI5rGJwRuCgd8V_1SSPQf0pz703G9leiGH4RgBmDK6qANyMdsJMgEXj4z4KKCzzSYF0MnpqVJetLY-cj5uIx-snyQU6lqxN1sCZ15JHA1eHkv0LysV2PiXVFLPGdQ8zUqA8m6_ErUENRnNOKSxi2pGSIOeU4cq7Ek"/>
+<div class="relative z-10 space-y-8 max-w-2xl mx-auto">
+<h2 class="font-h1 text-5xl">Prêt à façonner le futur du bien-être ?</h2>
+<p class="font-body-lg text-tertiary-fixed">
+                        Rejoignez nos 45 investisseurs actuels et participez à une aventure technologique à fort impact sociétal.
+                    </p>
+<div class="flex justify-center gap-4">
+<button class="bg-primary-container text-white px-10 py-5 rounded-full font-label-md text-xl hover:scale-105 transition-transform">Investir Maintenant</button>
+</div>
+<p class="text-caption text-tertiary-fixed-dim">Capital-risque. Investir comporte des risques de perte en capital.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 border-t border-gray-200 bg-[#F5F5F5] font-['Inter'] text-xs uppercase tracking-widest">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-gray-400">
+                © 2024 Zenith Wellness Marketplace. Confidential Investor Portal.
+            </div>
+<nav class="flex gap-8">
+<a class="text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">SEC Compliance</a>
+<a class="text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Contact Relations</a>
+</nav>
+</div>
+</footer>
+<!-- FAB -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary-container text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:scale-110 active:scale-95 transition-all z-40">
+<span class="material-symbols-outlined text-3xl">chat</span>
+</button>
+</body></html>

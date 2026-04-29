@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MyBestEvents - Influencer Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed-variant": "#00522f", "inverse-surface": "#2f3131", "secondary-fixed-dim": "#c8c6c5", "on-secondary-fixed": "#1b1b1c", "error-container": "#ffdad6", "outline-variant": "#bccabd", "on-surface": "#1a1c1c", "inverse-on-surface": "#f1f1f1", "on-surface-variant": "#3d4a40", surface: "#f9f9f9", "secondary-container": "#e2dfde", "on-error-container": "#93000a", background: "#f9f9f9", "surface-bright": "#f9f9f9", "surface-container-highest": "#e2e2e2", "inverse-primary": "#5cde97", "on-tertiary": "#ffffff", "on-primary-fixed": "#002110", "primary-container": "#2bb673", "on-tertiary-container": "#353738", "tertiary-fixed-dim": "#c6c6c7", "on-primary": "#ffffff", "tertiary-container": "#9fa0a0", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "surface-container-low": "#f3f3f3", "surface-tint": "#006d40", "tertiary-fixed": "#e2e2e2", "surface-container": "#eeeeee", "primary-fixed-dim": "#5cde97", "on-tertiary-fixed": "#1a1c1c", primary: "#006d40", "on-tertiary-fixed-variant": "#454747", tertiary: "#5d5f5f", "surface-container-lowest": "#ffffff", "primary-fixed": "#7afbb1", error: "#ba1a1a", "surface-variant": "#e2e2e2", "surface-dim": "#dadada", outline: "#6d7a6f", "on-error": "#ffffff", "secondary-fixed": "#e5e2e1", "on-secondary": "#ffffff", "on-primary-container": "#004024", secondary: "#5f5e5e", "on-secondary-container": "#636262", "on-background": "#1a1c1c"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "16px", xl: "32px", sm: "12px", "margin-desktop": "40px", base: "8px", md: "16px", xs: "4px", "margin-mobile": "20px", lg: "24px"}, fontFamily: {caption: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], h2: ["Inter"], "body-md": ["Inter"], h3: ["Inter"], h1: ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] h-16">
+<div class="flex justify-between items-center px-5 h-16 w-full max-w-7xl mx-auto font-['Inter'] antialiased">
+<div class="flex items-center gap-3">
+<span class="text-xl font-bold tracking-tight text-[#1E1E1E] dark:text-white cursor-pointer">Vitality Leisure</span>
+</div>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-2 pl-10 pr-4 text-label-md focus:ring-2 focus:ring-primary-container outline-none" placeholder="Search influencers in Occitanie..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 hover:text-[#2BB673] cursor-pointer transition-colors duration-200">notifications</span>
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 hover:text-[#2BB673] cursor-pointer transition-colors duration-200">settings</span>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-primary-container cursor-pointer active:opacity-70">
+<img alt="Partner profile" class="w-full h-full object-cover" data-alt="Close-up professional headshot of a smiling female wellness consultant with a clean professional studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCB1sND00Eh4IqZu0DGp2tGUpUxqCrMxBq-3g3CbIxz06iJ0OzHD5ezIAeTH-4SKIwLWVRfktOPEWu32tYvmQAmdtVzXZMPIkipifOTgR6-kQii7__IpB7yJkc85kvaSRb6VoDuP1Q9l-WigmYWYcuP4vVkxBoSghAvz_FPxsM4WOStynoPlxh9AatkMH0z4uSBoD7VYNbQpaqVgu5CX-Bbs5V8HHnctVtKoOczORdQJVpybX-Rk2-UzXavWjepVkC9NUo_zHRq-0"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Sidebar (Desktop) -->
+<aside class="hidden lg:flex fixed left-0 top-16 bottom-0 w-64 flex-col p-4 space-y-2 bg-white dark:bg-slate-900 border-r border-gray-100 dark:border-slate-800 z-40 font-['Inter'] text-sm font-medium">
+<div class="px-2 pb-6 pt-2">
+<h2 class="text-lg font-black text-[#2BB673]">Wellness Portal</h2>
+<p class="text-caption text-secondary">Partner Management</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 bg-[#2BB673]/10 text-[#2BB673] rounded-lg transition-all scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined">map</span>
+                Explorer
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">group</span>
+                Influencers
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+                Leads
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+                Analytics
+            </a>
+</nav>
+<button class="w-full py-3 bg-primary-container text-white rounded-xl font-label-md flex items-center justify-center gap-2 mt-4 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">add</span>
+            New Campaign
+        </button>
+<div class="pt-4 border-t border-gray-100 dark:border-slate-800 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+                Support
+            </a>
+<a class="flex items-center gap-3 px-3 py-2 text-gray-600 dark:text-gray-400 hover:bg-gray-50 transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="lg:ml-64 pt-16 pb-24 lg:pb-0 min-h-screen">
+<!-- Explorer Header & Filters -->
+<div class="sticky top-16 z-30 bg-white border-b border-gray-100 px-5 py-4">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-4 overflow-x-auto hide-scrollbar pb-2">
+<button class="flex items-center gap-2 px-4 py-2 bg-on-surface text-white rounded-full text-label-md whitespace-nowrap">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filters
+                    </button>
+<div class="h-6 w-[1px] bg-gray-200"></div>
+<button class="px-4 py-2 bg-gray-100 text-on-surface rounded-full text-label-md whitespace-nowrap border border-transparent hover:border-gray-200 transition-all">Corps</button>
+<button class="px-4 py-2 bg-gray-100 text-on-surface rounded-full text-label-md whitespace-nowrap border border-transparent hover:border-gray-200 transition-all">Émotions</button>
+<button class="px-4 py-2 bg-gray-100 text-on-surface rounded-full text-label-md whitespace-nowrap border border-transparent hover:border-gray-200 transition-all">Social</button>
+<button class="px-4 py-2 bg-gray-100 text-on-surface rounded-full text-label-md whitespace-nowrap border border-transparent hover:border-gray-200 transition-all">Mental</button>
+<button class="px-4 py-2 bg-gray-100 text-on-surface rounded-full text-label-md whitespace-nowrap border border-transparent hover:border-gray-200 transition-all">Spirituel</button>
+<div class="h-6 w-[1px] bg-gray-200"></div>
+<button class="px-4 py-2 bg-white border border-gray-200 text-on-surface rounded-full text-label-md whitespace-nowrap">Followers 10k-50k</button>
+<button class="px-4 py-2 bg-white border border-gray-200 text-on-surface rounded-full text-label-md whitespace-nowrap">AI Score 85+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row h-[calc(100vh-136px)]">
+<!-- List Section -->
+<div class="w-full lg:w-[450px] overflow-y-auto p-5 space-y-4 bg-surface">
+<div class="flex justify-between items-end mb-2">
+<h1 class="font-h2 text-on-surface">Influencers in Occitanie</h1>
+<span class="text-caption text-secondary">128 results</span>
+</div>
+<!-- Influencer Card 1 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:translate-y-[-2px] transition-transform cursor-pointer group">
+<div class="relative aspect-video">
+<img class="w-full h-full object-cover" data-alt="Serene woman practicing yoga on a wooden deck overlooking a misty valley in the Pyrenees mountains during sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3PyehEn6tujP5cckWiVyttKIUMHgpKs4QSWOLbbpXmVyPe9WWDnEq721zMSaA1NGzMDs4JNV9dDd9XjjR6X8aY-lIcalL5imK1HDxwbGti_aJNlgwr_XXQHLYvFSExyHsT3NWB9Z36jddbb1N3LmnaqQO3jRyoxzA-2BO5AtQpZFBvrMxtQsERaxCse1YmxWvbYxPb65vaK_1HNFFNMiPbpv7SqQlL4lz9taMo1CeUfboGZ1RQEzhqAQtOPt1LOJ9570shU4RJdFT"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-label-md text-on-surface">94</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-3 mb-2">
+<img class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="Close up portrait of a young woman with a warm friendly smile and healthy glowing skin outdoors in soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyJjMhbb7GK4DJxKE1GEpNRMXb2FynCBjy5YjdKyUo4q0aMrekZMrRiPCH_M0oOgAgIy1PFr3XH9hOCkUDEP5jXAQecF6x8tsZTRSYXqf1HWO7AX1eIKvH7RAXwEe96omUTkV58H2JZ5rF0JNB2WSLOxKwxAQDWP2d2Ud9k-Zp-LcmL1UbmIcaAeAcWv5YwtcYR8LSEYHAgfHnz1N0PcqYH1sud_pJPnBQ9JTWDjYDW0fieioHWydQMQtNBvObASU8VXFPsKytzGYn"/>
+<div>
+<h3 class="font-label-md text-on-surface">Léa V. Wellness</h3>
+<p class="text-caption text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Montpellier, Occitanie
+                                </p>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mb-3">
+<span class="px-2 py-0.5 bg-secondary-container/30 text-secondary text-[10px] uppercase font-bold rounded-md">Yoga</span>
+<span class="px-2 py-0.5 bg-secondary-container/30 text-secondary text-[10px] uppercase font-bold rounded-md">Mindfulness</span>
+<span class="px-2 py-0.5 bg-secondary-container/30 text-secondary text-[10px] uppercase font-bold rounded-md">Eco-Life</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="text-[10px] text-secondary uppercase font-bold">IG</p>
+<p class="text-label-md font-bold">42k</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-secondary uppercase font-bold">TikTok</p>
+<p class="text-label-md font-bold">128k</p>
+</div>
+</div>
+<button class="bg-[#2BB673] text-white px-4 py-2 rounded-lg text-label-md hover:bg-opacity-90 transition-all">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Influencer Card 2 -->
+<div class="bg-white rounded-2xl overflow-hidden shadow-[0px_4px_20px_rgba(0,0,0,0.05)] hover:translate-y-[-2px] transition-transform cursor-pointer group">
+<div class="relative aspect-video">
+<img class="w-full h-full object-cover" data-alt="Hiker standing on a rocky outcrop looking at the Gorges du Tarn canyon under a bright blue summer sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaw3ziPncK8mJz4tF6LNP5bPwQHgTlBqK8z5BPlHd7jhzYLJfH4k7PPDHwZPwZS3VPzvgHF3v2NeRV-qhqW9zDAe-0zYiLiKX3TpPGIv692VYrSzynYNKlNt9HC6Im_5LXTSDchBaI44u1aePFVBN-ijSPTRVKyat-ouPRxtZPwP9JP6UInsWn8_2OLVbCnIdM1kenBekzq8N9j6VXu0siOFdSUpHCme_Ak40yBoMz5gMwfYV8MbwSfCdbB3g-53BfjkhreJDBTZLn"/>
+<div class="absolute top-3 right-3 bg-white/90 backdrop-blur px-2 py-1 rounded-lg flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-primary-container text-[16px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="text-label-md text-on-surface">88</span>
+</div>
+</div>
+<div class="p-4">
+<div class="flex items-center gap-3 mb-2">
+<img class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="Portrait of an athletic man in outdoor gear smiling with a rugged mountain landscape in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXLe1LQlBvvzwwRPEfnsW_7Jr2V-b59MS5-crxCjfOvma5N8jA2vP-njFP3i7PAXOm4Gfo9PdQDK7tdr8rzGrFtpD-05n2G-xJplHfVHwkLlrpbedkYdTh6qjEG-YF-H0Jp8tM3FUy44i78_e5RR-on3Xp1_Am1Mo7rEf9Ig_MO-2pWXGG1eU-JKlht-7R2wgbCCCgl8s71NRFFX6Tl9pmLTF3L0z3pxtfuBdD7rvTfOR8tXkjiOmEj56Z3kRaKe_Tfweqy1OVPNAF"/>
+<div>
+<h3 class="font-label-md text-on-surface">Marc Outdoor</h3>
+<p class="text-caption text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> Toulouse, Occitanie
+                                </p>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mb-3">
+<span class="px-2 py-0.5 bg-secondary-container/30 text-secondary text-[10px] uppercase font-bold rounded-md">Hiking</span>
+<span class="px-2 py-0.5 bg-secondary-container/30 text-secondary text-[10px] uppercase font-bold rounded-md">Bio-Hacking</span>
+</div>
+<div class="flex justify-between items-center pt-3 border-t border-gray-50">
+<div class="flex gap-4">
+<div class="text-center">
+<p class="text-[10px] text-secondary uppercase font-bold">IG</p>
+<p class="text-label-md font-bold">15k</p>
+</div>
+<div class="text-center">
+<p class="text-[10px] text-secondary uppercase font-bold">TikTok</p>
+<p class="text-label-md font-bold">12k</p>
+</div>
+</div>
+<button class="bg-[#2BB673] text-white px-4 py-2 rounded-lg text-label-md hover:bg-opacity-90 transition-all">Book Now</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Section -->
+<div class="flex-1 relative bg-gray-200 hidden md:block">
+<!-- Map Placeholder Image -->
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="High quality aerial satellite view map of the Occitanie region in France showing mountain ranges and coastal cities" data-location="Occitanie, France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeA8RSvTULGy3cQU8tJTy1BGXU_ol8XuQRWKbQexSyJGoIRcCfpEAuBufFbw8vhGZm6EvPGXTJM6Fti8FlSKvJLfHJs3498crPNRqPQb9xpQvkO0e-JL2lCwkEByi0TpL2h-R28Is9QGYLBLr-L3VKbX3DOziCVj3CPzbD5H527xs0czWn5fI1Wa8WKta5qCB-i4RDsRCIUmUNgWaQtTaCJviXoYufP8pe4TrVZx_pr5XDxRCL3JV67b18u4QoOI2g7oRIqxo3GeUq"/>
+<!-- Pins -->
+<div class="absolute top-[30%] left-[60%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="bg-white p-2 rounded-xl shadow-lg border border-primary-container flex items-center gap-2 group-hover:scale-110 transition-transform">
+<img class="w-8 h-8 rounded-full" data-alt="Léa V. headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBczkE1t6ci9F3Z9AxIKg46BQ1Xojau1SutcvTz5lIkrNUhIjEeo14L6acerFESdohea1ln0Cclp47O0wOcFxACEbm7qUruA6djUW_zT6iwyplciIVWB8UuDcUcq_Z1aFkItl4Ci-QC3YVCz91-dQMPrsyRKrNUKkLEkqzxMpTixWAMFmSQPAcJ1KUkTvJEdSCPBKJZLEjcj7izfVlS9mjWoCN1ofY0FpYOp0rnD2zEZMV7fYcQJMwnTgy9qtpVaFz88s289CuBuoEt"/>
+<span class="font-bold text-label-md pr-1">Léa V.</span>
+</div>
+<div class="w-0.5 h-4 bg-primary-container mx-auto"></div>
+</div>
+<div class="absolute top-[50%] left-[35%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="bg-white p-2 rounded-xl shadow-lg border border-primary-container flex items-center gap-2 group-hover:scale-110 transition-transform">
+<img class="w-8 h-8 rounded-full" data-alt="Marc headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtd5eQMbvH6V_mQQDg6JYwZIJIR5n3UqR2cOaPgDYXBaFk436Vb8fradjNiVtQ2Emnb0szxcWqFW5TP2EhTUTb1Hcb826xrrKHMk9vp0bLhmU9tb7PxuJTmSbC1YMXpPd51l6dI3lTFjU0f_mwufcKHajLlOWHNJ9_8we6mpeFKMDCxl2_OFNfMizWxjNGKhhGcOUq28GuT67Uwh3HjILzIDnUE0x30msoSZ8BYqYV76TLexc56QCguOd8ZCWMb_7drijkK30lCcW1"/>
+<span class="font-bold text-label-md pr-1">Marc O.</span>
+</div>
+<div class="w-0.5 h-4 bg-primary-container mx-auto"></div>
+</div>
+<div class="absolute top-[65%] left-[75%] -translate-x-1/2 -translate-y-1/2 cursor-pointer group">
+<div class="bg-white/80 backdrop-blur p-1.5 rounded-full shadow-lg border border-white group-hover:bg-primary-container group-hover:border-primary-container transition-colors">
+<div class="w-2 h-2 bg-primary-container group-hover:bg-white rounded-full"></div>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 text-on-surface">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-50 text-on-surface">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 bg-primary-container text-white rounded-full shadow-[0px_8px_24px_rgba(43,182,115,0.2)] flex items-center justify-center mt-4 active:scale-95 transition-transform">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB for Campaigns (Only on Main Dashboard/Explorer) -->
+<div class="fixed bottom-24 right-6 lg:bottom-10 lg:right-10 z-50">
+<button class="flex items-center gap-2 bg-primary-container text-white px-6 py-4 rounded-full shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined">campaign</span>
+<span class="font-label-md">Launch Campaign</span>
+</button>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-3 bg-white dark:bg-slate-950 border-t border-gray-100 dark:border-slate-800 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] rounded-t-3xl font-['Inter'] text-[10px] font-semibold">
+<div class="flex flex-col items-center justify-center text-[#2BB673] bg-[#2BB673]/5 rounded-2xl p-2 transition-transform duration-200">
+<span class="material-symbols-outlined">explore</span>
+<span>Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 transition-transform duration-200">
+<span class="material-symbols-outlined">analytics</span>
+<span>Stats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 transition-transform duration-200">
+<span class="material-symbols-outlined">hub</span>
+<span>Leads</span>
+</div>
+<div class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 transition-transform duration-200">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</div>
+</nav>
+</body></html>

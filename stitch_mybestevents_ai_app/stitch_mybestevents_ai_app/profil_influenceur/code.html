@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-primary-fixed-variant": "#00522f", "inverse-surface": "#2f3131", "secondary-fixed-dim": "#c8c6c5", "on-secondary-fixed": "#1b1b1c", "error-container": "#ffdad6", "outline-variant": "#bccabd", "on-surface": "#1a1c1c", "inverse-on-surface": "#f1f1f1", "on-surface-variant": "#3d4a40", surface: "#f9f9f9", "secondary-container": "#e2dfde", "on-error-container": "#93000a", background: "#f9f9f9", "surface-bright": "#f9f9f9", "surface-container-highest": "#e2e2e2", "inverse-primary": "#5cde97", "on-tertiary": "#ffffff", "on-primary-fixed": "#002110", "primary-container": "#2bb673", "on-tertiary-container": "#353738", "tertiary-fixed-dim": "#c6c6c7", "on-primary": "#ffffff", "tertiary-container": "#9fa0a0", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "surface-container-low": "#f3f3f3", "surface-tint": "#006d40", "tertiary-fixed": "#e2e2e2", "surface-container": "#eeeeee", "primary-fixed-dim": "#5cde97", "on-tertiary-fixed": "#1a1c1c", primary: "#006d40", "on-tertiary-fixed-variant": "#454747", tertiary: "#5d5f5f", "surface-container-lowest": "#ffffff", "primary-fixed": "#7afbb1", error: "#ba1a1a", "surface-variant": "#e2e2e2", "surface-dim": "#dadada", outline: "#6d7a6f", "on-error": "#ffffff", "secondary-fixed": "#e5e2e1", "on-secondary": "#ffffff", "on-primary-container": "#004024", secondary: "#5f5e5e", "on-secondary-container": "#636262", "on-background": "#1a1c1c"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {gutter: "16px", xl: "32px", sm: "12px", "margin-desktop": "40px", base: "8px", md: "16px", xs: "4px", "margin-mobile": "20px", lg: "24px"}, fontFamily: {caption: ["Inter"], "body-lg": ["Inter"], "label-md": ["Inter"], h2: ["Inter"], "body-md": ["Inter"], h3: ["Inter"], h1: ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- TopNavBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-gray-100 dark:border-slate-800 shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center px-5 h-16 w-full max-w-7xl mx-auto font-['Inter'] antialiased">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-[#1E1E1E] dark:text-white">Vitality Leisure</span>
+</div>
+<div class="hidden md:flex flex-1 max-w-md mx-8">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-[#2BB673]/20 transition-all text-sm" placeholder="Search influencers..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-gray-500 hover:text-[#2BB673] transition-colors cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-gray-500 hover:text-[#2BB673] transition-colors cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-gray-100">
+<img class="h-full w-full object-cover" data-alt="Professional profile headshot of a business partner in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtSR7IEQV7d7fFsmM4Sa4ko5ZyBjjp_G5i04Yb5ubVbjiWMTiSh8VpmnSYuOOI-vTY_s7SDSXIFMeGYF-KcUf-4GPCBQia3vGbRZYIxXgPAJyNDqbPKqQ1ndAvESOEJTjcmt2KdXdTYYJQfEtr7vbgIoSw1yRPBsYdUkyFQvs30nris68hroaaFH-fQ4v54Bp_yeXg6S6u_2OT5rUkq2fbpvr05lM9xeBZtPhjROs46LZUgcEcMDm0u8w-KpSm1zFl5t0Rzoa7CUBp"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex pt-16 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col p-4 space-y-2 bg-white dark:bg-slate-900 h-[calc(100vh-64px)] w-64 border-r border-gray-100 dark:border-slate-800 sticky top-16">
+<div class="px-4 py-6 mb-4">
+<h2 class="text-lg font-black text-[#2BB673]">Wellness Portal</h2>
+<p class="text-xs text-gray-400 font-medium uppercase tracking-wider">Partner Management</p>
+</div>
+<nav class="flex-1 space-y-1 font-['Inter'] text-sm font-medium">
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all rounded-lg scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span>Explorer</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all rounded-lg scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-[#2BB673]/10 text-[#2BB673] rounded-lg scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="group" data-weight="fill" style="font-variation-settings: 'FILL' 1;">group</span>
+<span>Influencers</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all rounded-lg scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span>Leads</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-slate-800 transition-all rounded-lg scale-98 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Analytics</span>
+</a>
+</nav>
+<button class="w-full mt-4 bg-[#2BB673] text-white py-3 rounded-xl font-semibold shadow-lg shadow-[#2BB673]/20 active:scale-95 transition-all">
+                New Campaign
+            </button>
+<div class="pt-8 border-t border-gray-100 dark:border-slate-800 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 max-w-5xl mx-auto px-5 lg:px-xl py-xl mb-24 lg:mb-0">
+<!-- Profile Header -->
+<section class="bg-surface-container-lowest rounded-3xl p-lg shadow-[0px_4px_20px_rgba(0,0,0,0.05)] mb-xl">
+<div class="flex flex-col md:flex-row gap-lg items-center md:items-start text-center md:text-left">
+<div class="relative">
+<div class="w-32 h-32 md:w-40 md:h-40 rounded-3xl overflow-hidden ring-4 ring-[#2BB673]/10">
+<img class="w-full h-full object-cover" data-alt="Portrait of a creative lifestyle influencer with a trendy aesthetic in a sunlit urban studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiUWCGPwQ2yf5B5PpH5x6cuhO8u_PqCWYuQWKpwHDL9veb6EHRsJD-hdkWRGnkg3wmGrj9oRQZyLt7CVFq9Grth0_FzAH_QAC4fYqPuNDwL0_vE4_FoQQGbPsmivYpdG6A2AC3l3L-SnegSo6VQMdWgL1ZP9Jeo5AQlZMVF_x4MywIiiMH1t6u-bZ2Yf1QB7NrgLnDkhlpwZy7gCim0cGsWON-vheQHoDdV64Od8fSGMd8LrEuo2xqow_E0PCnxRZbeUiYyJ5yCuTI"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-white p-2 rounded-xl shadow-md border border-gray-50">
+<img class="w-6 h-6 rounded-md" data-alt="Instagram icon with colorful gradient brand identity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRCIC6faDAaNUMCG6GAMUj56DPBgVDw4JkCJ9eR9dEeHEZxca0RMYFRn_E15jqUBoHjMRTYKOJqKkiYwF2t44e2jMIIun2tyErJruO7Udi27zEA4OzHq6Hs0XezkRJ_47S76nrt3DK9SthdT-vgBSY39GgcH3k4-Zhz9F07CufLE2m2O0ONlLdDkBRtGkv8xmlE0qMxBehtezhcj9UIiqS7IreHzWJqNHNsJDqXMn1jNDkTX9-_r_Y17aXUhY3qVE4rDjjncyPlt1"/>
+</div>
+</div>
+<div class="flex-1 space-y-md">
+<div>
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-2">
+<h1 class="font-h1 text-on-surface">Camille Laurent</h1>
+<span class="bg-[#2BB673]/10 text-[#2BB673] px-3 py-1 rounded-full font-label-md text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span> Verified Partner
+                                </span>
+</div>
+<div class="flex items-center justify-center md:justify-start gap-2 text-on-surface-variant font-label-md">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+                                Paris, France
+                            </div>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                            Content creator focused on luxury wellness and mindful travel. Helping premium brands reach a sophisticated audience through authentic storytelling and high-aesthetic visuals.
+                        </p>
+<div class="flex flex-wrap gap-2 justify-center md:justify-start">
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-medium text-on-surface-variant">Wellness</span>
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-medium text-on-surface-variant">Luxury Travel</span>
+<span class="px-4 py-1.5 bg-surface-container rounded-full text-caption font-medium text-on-surface-variant">Yoga</span>
+</div>
+</div>
+<div class="w-full md:w-auto">
+<button class="w-full md:w-auto bg-[#2BB673] text-white px-8 py-4 rounded-2xl font-h3 shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:shadow-[#2BB673]/30 transition-all active:scale-95">
+                            Proposer une Collaboration
+                        </button>
+</div>
+</div>
+</section>
+<!-- Stats & AI Breakdown Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg mb-xl">
+<!-- Social Stats -->
+<div class="lg:col-span-1 space-y-md">
+<h3 class="font-h3 text-on-surface px-1">Social Stats</h3>
+<div class="bg-surface-container-lowest rounded-3xl p-md shadow-[0px_4px_20px_rgba(0,0,0,0.05)] space-y-4">
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="camera">camera</span>
+</div>
+<div>
+<p class="text-caption font-medium text-on-surface-variant">Instagram</p>
+<p class="font-h2 text-on-surface">128K</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[#2BB673] font-label-md">+2.4%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-black rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined" data-icon="movie">movie</span>
+</div>
+<div>
+<p class="text-caption font-medium text-on-surface-variant">TikTok</p>
+<p class="font-h2 text-on-surface">45.2K</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-[#2BB673] font-label-md">+5.1%</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-[#2BB673]/10 rounded-xl flex items-center justify-center text-[#2BB673]">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</div>
+<div>
+<p class="text-caption font-medium text-on-surface-variant">Engagement Rate</p>
+<p class="font-h2 text-on-surface">4.8%</p>
+</div>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Score Breakdown -->
+<div class="lg:col-span-2 space-y-md">
+<h3 class="font-h3 text-on-surface px-1">AI Score Breakdown</h3>
+<div class="bg-surface-container-lowest rounded-3xl p-lg shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex items-center justify-center py-4">
+<div class="relative w-40 h-40 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-[#2BB673]" cx="80" cy="80" fill="transparent" r="70" stroke="currentColor" stroke-dasharray="440" stroke-dashoffset="44" stroke-width="12"></circle>
+</svg>
+<div class="absolute text-center">
+<p class="font-h1 text-[#2BB673]">92</p>
+<p class="text-caption font-bold text-on-surface-variant uppercase">Global Score</p>
+</div>
+</div>
+</div>
+<div class="space-y-6 flex flex-col justify-center">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Brand Fit</span>
+<span class="font-label-md text-[#2BB673]">98%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-[#2BB673] rounded-full" style="width: 98%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Audience Quality</span>
+<span class="font-label-md text-[#2BB673]">88%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-[#2BB673] rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-md text-on-surface">Influence Power</span>
+<span class="font-label-md text-[#2BB673]">91%</span>
+</div>
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-[#2BB673] rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Content Gallery -->
+<section class="space-y-md">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-h3 text-on-surface">Recent Content</h3>
+<button class="text-sm font-semibold text-[#2BB673] hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-md">
+<!-- Gallery Item -->
+<div class="group relative aspect-[9/16] bg-surface-container rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Dynamic shot of a person practicing yoga on a cliff overlooking the ocean at sunrise" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7KB53HKqh6KbqgN9qAKThQ0Dhjee0ZJhp_uCnqJZd2wegBJjC8OHlT3KdCxzEopRo1UofssyzZ_kWjIbDvdNoiXLL_3RzvZ2uQ4MS0EjLJzdQi8VPQaTNGScWgZ1Wa-T0Aqcrfzywue_mcg9Megce7iTf28w879ltUpLy96_O60HyX0PRgtG7oF54phLJSHLWxQY5ANp10Hgi-eKZGh4c_Mh-D4ZgPM9pqXU4fMz3xmfmWId96icUBuCmga5g1CB3NaRHp1g1PGPJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<div class="flex items-center gap-3 text-white">
+<span class="flex items-center gap-1 text-caption font-bold">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span> 12.4K
+                                </span>
+<span class="flex items-center gap-1 text-caption font-bold">
+<span class="material-symbols-outlined text-[18px]" data-icon="chat_bubble" style="font-variation-settings: 'FILL' 1;">chat_bubble</span> 342
+                                </span>
+</div>
+</div>
+<div class="absolute top-3 right-3 bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Gallery Item -->
+<div class="group relative aspect-[9/16] bg-surface-container rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Artistic flat lay of healthy breakfast bowl with tropical fruits on a minimalist wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBceZp2iRa1yY-zmOOJcU4TjtBk_gHin3YH-_vWucGMHfxGf_bloifBWJPazRLG2S7ev4_hXLzhKuocRNKeoXerBvD90y7ER6-CRqOAicySeE_kVQaMb4089yUC-Ujf3b4yWbvNWhOJ2blRlSfRrYem0RR5bwXHcoaiBTd2VR22zbZDO43EeufrpT77BSm6CTsMMieGrYw9gpo_QvRUXLQyhA6jZmav1fNJDHXCqdoFyo5HiPp6uHsSwM-vbASt9ezsSHy4fx9dSQ-f"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<div class="flex items-center gap-3 text-white">
+<span class="flex items-center gap-1 text-caption font-bold">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span> 8.9K
+                                </span>
+</div>
+</div>
+</div>
+<!-- Gallery Item -->
+<div class="group relative aspect-[9/16] bg-surface-container rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Serene person meditating in a forest setting with soft dapple sunlight filtering through leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsG75zth3BjTYNCNo1CokBEtUVczv2mSY9hPiAnOJaBFg6q42LfcNkCsbc-7axTBMwD_EcaHMZlAih8koMMtL5lxbBir0b4_ICq9v13u3MdYKihCUrDFgBufOdO3-PocSHDAwmX6EvbnPcw9DQQfRGq2WchUJfBdZVxIr_8J_rM4nPtrN5ILecvgqPsQ_dCpaMLXA6yLx-cgwo4skM5-zzaY6eLddWiJ4m1Pd3iWA3C_FD0drGLfdhV8c5NNB06iVis0pFYW_-zcXZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<div class="flex items-center gap-3 text-white">
+<span class="flex items-center gap-1 text-caption font-bold">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span> 15.1K
+                                </span>
+</div>
+</div>
+<div class="absolute top-3 right-3 bg-white/20 backdrop-blur-md p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined text-[20px]" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<!-- Gallery Item -->
+<div class="group relative aspect-[9/16] bg-surface-container rounded-2xl overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close-up of luxury skincare products arranged elegantly on a white marble surface with a green branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLs3YdUmReGBFyZ4YkCBD1-zzFR4_ttSCNd41JuHKgsZ-rz5RJwuYfIDjkqgTIAqR2J4-0IzqJ5xmbEN-gx3xLf0PQRJSDKEUALsVQ8O1UggpjMB0CElBglF4Yhsfyqk_liOFC4qePVuzolfSt1EPJ_Hsrhz3LiuUOdH7sIgE-UHKPrht69_e2ieqpskA7YcAh6gGhzuMQrfRm9f-8agDqHFm6zv26mMMgr1qM-RIhdkByGiRY4V6m-_WTbRWyqhr-DVgkK-OW50qV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
+<div class="flex items-center gap-3 text-white">
+<span class="flex items-center gap-1 text-caption font-bold">
+<span class="material-symbols-outlined text-[18px]" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span> 11.2K
+                                </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar -->
+<nav class="lg:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-3 bg-white dark:bg-slate-950 rounded-t-3xl border-t border-gray-100 dark:border-slate-800 shadow-[0px_-4px_20px_rgba(0,0,0,0.05)] font-['Inter'] text-[10px] font-semibold">
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 tap-highlight-transparent transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span>Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 tap-highlight-transparent transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 p-2 active:bg-gray-50 tap-highlight-transparent transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>Leads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2BB673] bg-[#2BB673]/5 rounded-2xl p-2 active:bg-gray-50 tap-highlight-transparent transition-transform duration-200" href="#">
+<span class="material-symbols-outlined active-nav-fill" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span>Profile</span>
+</a>
+</nav>
+</body></html>

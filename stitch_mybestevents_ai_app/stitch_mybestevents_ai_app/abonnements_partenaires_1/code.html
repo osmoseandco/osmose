@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface-variant": "#3d4a40",
+                "outline": "#6d7a6f",
+                "tertiary-container": "#9fa0a0",
+                "surface-container": "#eeeeee",
+                "surface-bright": "#f9f9f9",
+                "primary-fixed-dim": "#5cde97",
+                "on-secondary-container": "#636262",
+                "tertiary-fixed": "#e2e2e2",
+                "secondary": "#5f5e5e",
+                "on-primary": "#ffffff",
+                "on-secondary-fixed-variant": "#474746",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "on-tertiary-fixed": "#1a1c1c",
+                "inverse-on-surface": "#f1f1f1",
+                "on-surface": "#1a1c1c",
+                "secondary-fixed": "#e5e2e1",
+                "inverse-surface": "#2f3131",
+                "surface-variant": "#e2e2e2",
+                "surface-tint": "#006d40",
+                "primary-fixed": "#7afbb1",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e2e2e2",
+                "tertiary": "#5d5f5f",
+                "surface-container-low": "#f3f3f3",
+                "secondary-fixed-dim": "#c8c6c5",
+                "error-container": "#ffdad6",
+                "on-primary-fixed": "#002110",
+                "inverse-primary": "#5cde97",
+                "error": "#ba1a1a",
+                "surface-container-high": "#e8e8e8",
+                "primary-container": "#2bb673",
+                "primary": "#006d40",
+                "on-primary-container": "#004024",
+                "surface": "#f9f9f9",
+                "secondary-container": "#e2dfde",
+                "surface-container-lowest": "#ffffff",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-tertiary-container": "#353738",
+                "surface-dim": "#dadada",
+                "on-secondary-fixed": "#1b1b1c",
+                "background": "#f9f9f9",
+                "on-tertiary": "#ffffff",
+                "on-secondary": "#ffffff",
+                "on-background": "#1a1c1c",
+                "on-primary-fixed-variant": "#00522f",
+                "outline-variant": "#bccabd",
+                "on-error-container": "#93000a",
+                "accent-orange": "#FF8A4C"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "caption": ["Inter"],
+                "body-md": ["Inter"],
+                "h3": ["Inter"],
+                "h2": ["Inter"],
+                "h1": ["Inter"],
+                "body-lg": ["Inter"],
+                "label-md": ["Inter"]
+            },
+            "fontSize": {
+                "caption": ["12px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "400"}],
+                "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                "h3": ["20px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "600"}],
+                "h2": ["24px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "h1": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 right-0 w-full z-40 border-b border-slate-100 bg-white/80 backdrop-blur-md shadow-[0px_4px_20px_rgba(0,0,0,0.03)] flex items-center justify-between px-8 h-16 ml-64">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold tracking-tighter text-emerald-600">WellnessCore</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-sans text-sm font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors duration-200" href="#">Dashboard</a>
+<a class="font-sans text-sm font-medium tracking-tight text-emerald-600 font-bold" href="#">Partner Portal</a>
+<a class="font-sans text-sm font-medium tracking-tight text-slate-500 hover:text-slate-900 transition-colors duration-200" href="#">Financials</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer active:scale-95 transition-transform">notifications</span>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer active:scale-95 transition-transform">help_outline</span>
+<div class="w-8 h-8 rounded-full bg-slate-200 overflow-hidden">
+<img alt="User avatar" class="w-full h-full object-cover" data-alt="professional portrait of a healthcare executive in a bright modern office setting, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2UR2z1TwXnQcTp5bDPT6eZySvACkZTN5j3-yYCRzKFr2Jmpiy4mCSBFlAzpGTplCndjvdsosTSMnZQUnmafvnBawgCDUj9qGqbb2kwPI-faTDkXoqTq-sXNle3a9g_CbcEysLa17MswNCi6iCUcNhs-2bDeHfsodkknR3CpMNPV_pPL6Y0BLXbJpWi_FoIqftz4-UhhT0l2DIiNN6-khDP9eCtCfcEfuvKSZqA9J6ifzT9IjP_Sx2qecOndhTufby4oV4nxAO4oQq"/>
+</div>
+</div>
+</div>
+</nav>
+<!-- Sidebar Navigation Shell -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-slate-100 bg-white flex flex-col h-full py-6">
+<div class="px-6 mb-8">
+<h1 class="text-xl font-black text-slate-900">Admin Panel</h1>
+<p class="text-[12px] text-slate-400 font-medium tracking-wide">ENTERPRISE TIER</p>
+</div>
+<div class="space-y-1 px-4 flex-1">
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-sans text-[14px]">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-sans text-[14px]">Event Management</span>
+</a>
+<a class="flex items-center gap-3 bg-emerald-50 text-emerald-600 rounded-lg px-4 py-3 font-semibold transition-all duration-300" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-sans text-[14px]">Partner Portal</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-sans text-[14px]">Wellness Metrics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-sans text-[14px]">Financials</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-sans text-[14px]">Settings</span>
+</a>
+</div>
+<div class="mt-auto px-4 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-sans text-[14px]">Support</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 hover:text-slate-900 px-4 py-3 rounded-lg hover:bg-slate-50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-sans text-[14px]">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 pt-24 pb-20 px-10 min-h-screen">
+<!-- Hero Header -->
+<header class="max-w-5xl mx-auto text-center mb-16">
+<span class="text-primary font-label-md uppercase tracking-widest mb-4 block">Partenariat WellnessCore</span>
+<h1 class="font-h1 text-on-background mb-4 text-5xl">Développez votre impact avec nous.</h1>
+<p class="font-body-lg text-secondary max-w-2xl mx-auto">Rejoignez notre réseau de partenaires d'élite et accédez à des outils de gestion avancés, des analyses de données précises et une visibilité accrue auprès de millions d'utilisateurs.</p>
+</header>
+<!-- Pricing Grid -->
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- BASIC Plan -->
+<div class="bg-white rounded-[2rem] p-8 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-slate-100 flex flex-col transition-all duration-300 hover:shadow-xl group">
+<div class="mb-8">
+<h2 class="font-h3 text-secondary mb-2">BASIC</h2>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-on-background">29€</span>
+<span class="text-secondary font-medium">/mo</span>
+</div>
+<p class="text-slate-400 text-sm mt-4">Essentiel pour les nouveaux praticiens souhaitant digitaliser leur activité.</p>
+</div>
+<div class="space-y-4 mb-10 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Profil partenaire standard</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Gestion de 2 événements/mois</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Support par email 48h</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Tableau de bord basique</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-full bg-accent-orange text-white font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0px_8px_24px_rgba(255,138,76,0.2)]">
+                    Choisir ce plan
+                </button>
+</div>
+<!-- PREMIUM Plan (Featured) -->
+<div class="bg-white rounded-[2rem] p-8 shadow-[0px_10px_40px_rgba(0,0,0,0.08)] border-2 border-emerald-500/30 flex flex-col transition-all duration-300 hover:shadow-2xl relative scale-105 z-10">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-500 text-white text-[12px] font-bold px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
+                    Plus Populaire
+                </div>
+<div class="mb-8">
+<h2 class="font-h3 text-emerald-600 mb-2">PREMIUM</h2>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-on-background">79€</span>
+<span class="text-secondary font-medium">/mo</span>
+</div>
+<p class="text-slate-400 text-sm mt-4">Optimisé pour les studios en croissance et les professionnels établis.</p>
+</div>
+<div class="space-y-4 mb-10 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant font-semibold">Tous les avantages Basic</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Événements illimités</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Analyses de performance avancées</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Badge "Partenaire Vérifié"</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+<span class="font-body-md text-on-surface-variant">Support prioritaire 24h</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-full bg-accent-orange text-white font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0px_8px_24px_rgba(255,138,76,0.3)]">
+                    Choisir ce plan
+                </button>
+</div>
+<!-- ELITE Plan -->
+<div class="bg-slate-900 rounded-[2rem] p-8 shadow-[0px_4px_20px_rgba(0,0,0,0.05)] flex flex-col transition-all duration-300 hover:shadow-xl group">
+<div class="mb-8">
+<h2 class="font-h3 text-emerald-400 mb-2">ELITE</h2>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-white">149€</span>
+<span class="text-slate-400 font-medium">/mo</span>
+</div>
+<p class="text-slate-400 text-sm mt-4">La solution complète pour les franchises et les organisations premium.</p>
+</div>
+<div class="space-y-4 mb-10 flex-1">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+<span class="font-body-md text-slate-200 font-semibold">Tous les avantages Premium</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+<span class="font-body-md text-slate-200">Mise en avant algorithmique</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+<span class="font-body-md text-slate-200">Accès API pour intégrations</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+<span class="font-body-md text-slate-200">Account Manager dédié</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-400 text-xl">check_circle</span>
+<span class="font-body-md text-slate-200">Rapports financiers trimestriels</span>
+</div>
+</div>
+<button class="w-full py-4 px-6 rounded-full bg-accent-orange text-white font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-95 shadow-[0px_8px_24px_rgba(255,138,76,0.2)]">
+                    Choisir ce plan
+                </button>
+</div>
+</div>
+<!-- Trust Section (Stripe Style) -->
+<section class="max-w-6xl mx-auto mt-24">
+<div class="bg-white rounded-[2.5rem] p-12 overflow-hidden relative shadow-[0px_4px_20px_rgba(0,0,0,0.05)]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div>
+<h3 class="font-h2 text-on-background mb-6">Paiement sécurisé par Stripe</h3>
+<p class="font-body-md text-secondary mb-8">Nous utilisons les protocoles les plus récents pour garantir la sécurité de vos transactions. Aucun détail de carte bancaire n'est stocké sur nos serveurs.</p>
+<div class="flex gap-4">
+<div class="bg-slate-50 px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">shield</span>
+<span class="text-sm font-medium text-slate-600">Conforme PCI-DSS</span>
+</div>
+<div class="bg-slate-50 px-4 py-2 rounded-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">lock</span>
+<span class="text-sm font-medium text-slate-600">Cryptage SSL 256-bit</span>
+</div>
+</div>
+</div>
+<div class="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Transaction dashboard visual" class="w-full h-full object-cover" data-alt="close-up of a sleek digital payment dashboard on a tablet showing financial growth charts with soft blue and green hues" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQCjdyXJcyrvV7CnNi5Ag276rLZNxdQMPNC_IOeOnpudkQd5SQKWol1GSkgh2tBS2SdFnCANnc50EtUYYHM-QLjwS5GSlMea8dAMM16S5GjgLQVyq3K98XDYCW_Of06UdHuQ39iPjr7plpUuyBF2N9-ZMl8q0uzd-a8sIG3SM4eZA5UhvHwDGHoO04eegCEf8CGVsAnd9u7t8MHVFWkNdQrwXOfu_RltznpxDWQfxGzxfmqA48G7Ple9EWeVt04iVqzA3ybxnlssfU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer / FAQ Anchor -->
+<footer class="max-w-5xl mx-auto mt-20 text-center pb-10">
+<p class="text-slate-400 font-body-md">
+                Des questions sur nos abonnements ? 
+                <a class="text-emerald-600 font-bold hover:underline decoration-2 underline-offset-4" href="#">Contactez notre équipe commerciale</a>
+</p>
+</footer>
+</main>
+<!-- Floating Action Button -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] hover:scale-110 active:scale-95 transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">help</span>
+</button>
+</div>
+</body></html>

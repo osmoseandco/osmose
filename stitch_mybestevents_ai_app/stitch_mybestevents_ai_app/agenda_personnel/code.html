@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-tertiary-fixed": "#1a1c1c", "outline-variant": "#bccabd", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", secondary: "#5f5e5e", "on-background": "#1a1c1c", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-secondary-fixed-variant": "#474746", "on-secondary": "#ffffff", "on-primary-fixed": "#002110", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", outline: "#6d7a6f", "on-error-container": "#93000a", error: "#ba1a1a", "primary-container": "#2bb673", "on-surface-variant": "#3d4a40", "on-surface": "#1a1c1c", "error-container": "#ffdad6", "on-secondary-container": "#636262", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", background: "#f9f9f9", "surface-bright": "#f9f9f9", tertiary: "#5d5f5f", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-low": "#f3f3f3", primary: "#006d40", "on-tertiary": "#ffffff", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", surface: "#f9f9f9", "tertiary-fixed-dim": "#c6c6c7", "on-tertiary-container": "#353738", "inverse-surface": "#2f3131", "primary-fixed": "#7afbb1"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {base: "8px", xl: "32px", "margin-desktop": "40px", lg: "24px", gutter: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", md: "16px"}, fontFamily: {h3: ["Inter"], h2: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], caption: ["Inter"], "body-lg": ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+        body { background-color: #f9f9f9; }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex justify-between items-center h-16 px-5 md:px-10 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold tracking-tight text-[#1E1E1E] dark:text-white font-h1">Zenith Wellness</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E1E1E] dark:hover:text-white transition-colors font-label-md" href="#">Explorateur</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E1E1E] dark:hover:text-white transition-colors font-label-md" href="#">Favoris</a>
+<a class="text-[#2BB673] border-b-2 border-[#2BB673] pb-1 font-label-md" href="#">Agenda</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-[#1E1E1E] dark:hover:text-white transition-colors font-label-md" href="#">Profil</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</button>
+<button class="p-2 text-slate-600 hover:bg-slate-50 rounded-full transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img alt="User profile" class="w-8 h-8 rounded-full border border-slate-200" data-alt="Portrait of a smiling young professional woman with natural lighting and soft blurred background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE0KIWrundLsvT8ASgMuxFrVZpSpzO2He1xPXrIykVCO5opXPQmnMYIwLwam3PQ5lUU2_1dOYaLAmrPELOYfUPABWaaRZA92UnJFa7OO4P_VAu5XHUnegluN-jN_I6HNC47NyKi3TWM48lpSOAHYRPKDvZ3hTSbDNszNrACE7Hm37k0wJzYIzjdv1JXaQ8KOgrdtp2jfGhTiL6V45Ev5PmfYSvOH8uYs95HNY8-82niAhSpLH9qjDsldgYerc5VzD6sVuWeU2PVWVh"/>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-5 md:px-10 max-w-7xl mx-auto">
+<!-- Dashboard Header -->
+<div class="mb-lg">
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Votre Agenda Bien-être</h1>
+<p class="font-body-md text-secondary">Optimisez votre temps pour une vie plus saine.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+<!-- Left Column: Calendar & Filters -->
+<div class="lg:col-span-4 space-y-lg">
+<!-- Mini Calendar Card -->
+<div class="bg-white p-md rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] border border-slate-50">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h3 text-h3">Novembre 2024</h3>
+<div class="flex gap-2">
+<button class="p-1 hover:bg-surface-container rounded"><span class="material-symbols-outlined">chevron_left</span></button>
+<button class="p-1 hover:bg-surface-container rounded"><span class="material-symbols-outlined">chevron_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center mb-xs">
+<span class="text-caption font-label-md text-secondary">L</span>
+<span class="text-caption font-label-md text-secondary">M</span>
+<span class="text-caption font-label-md text-secondary">M</span>
+<span class="text-caption font-label-md text-secondary">J</span>
+<span class="text-caption font-label-md text-secondary">V</span>
+<span class="text-caption font-label-md text-secondary">S</span>
+<span class="text-caption font-label-md text-secondary text-primary">D</span>
+</div>
+<div class="grid grid-cols-7 gap-1 text-center">
+<!-- Simplified Calendar Grid -->
+<div class="p-2 text-caption text-surface-variant">28</div>
+<div class="p-2 text-caption text-surface-variant">29</div>
+<div class="p-2 text-caption text-surface-variant">30</div>
+<div class="p-2 text-caption text-surface-variant">31</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer">1</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer">2</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer text-primary">3</div>
+<div class="p-2 text-caption font-label-md bg-primary-container text-on-primary-container rounded-lg cursor-pointer">4</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer relative">5<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span></div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer relative">6<span class="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-primary rounded-full"></span></div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer">7</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer">8</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer">9</div>
+<div class="p-2 text-caption font-label-md hover:bg-primary-container/10 rounded-lg cursor-pointer text-primary">10</div>
+</div>
+</div>
+<!-- Intelligent Reminder Card -->
+<div class="bg-primary-container/10 p-lg rounded-xl border border-primary-container/20">
+<div class="flex items-start gap-md mb-md">
+<div class="p-2 bg-primary-container text-on-primary-container rounded-lg">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 text-on-primary-container">Rappel Intelligent</h4>
+<p class="text-caption text-on-primary-container/80 mt-xs">Vous avez 2 heures de libre demain après-midi.</p>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-label-md py-3 rounded-xl shadow-lg active:scale-95 transition-all">
+                        Combler ce trou
+                    </button>
+</div>
+</div>
+<!-- Right Column: Timeline/List -->
+<div class="lg:col-span-8">
+<!-- Filter Chips -->
+<div class="flex gap-md mb-lg overflow-x-auto pb-2 no-scrollbar">
+<button class="bg-on-background text-white px-md py-2 rounded-full font-label-md whitespace-nowrap">Tout</button>
+<button class="bg-white border border-slate-200 text-secondary px-md py-2 rounded-full font-label-md whitespace-nowrap hover:bg-slate-50">Sessions Yoga</button>
+<button class="bg-white border border-slate-200 text-secondary px-md py-2 rounded-full font-label-md whitespace-nowrap hover:bg-slate-50">Massages</button>
+<button class="bg-white border border-slate-200 text-secondary px-md py-2 rounded-full font-label-md whitespace-nowrap hover:bg-slate-50">Restaurants</button>
+</div>
+<!-- Timeline -->
+<div class="space-y-lg relative before:absolute before:left-[19px] before:top-2 before:bottom-0 before:w-0.5 before:bg-slate-100">
+<!-- Today Group -->
+<div class="relative pl-xl">
+<div class="absolute left-0 top-1 w-10 h-10 bg-white border-2 border-primary rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-primary" data-icon="today">today</span>
+</div>
+<div class="mb-md">
+<h3 class="font-h3 text-h3">Aujourd'hui, 4 Nov</h3>
+</div>
+<!-- Card 1: Yoga -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col md:flex-row mb-md border border-slate-50">
+<div class="md:w-48 h-32 md:h-auto overflow-hidden">
+<img alt="Yoga Session" class="w-full h-full object-cover" data-alt="Serene interior of a yoga studio with natural wood floors and large windows, a person in a yoga pose with soft sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPDMHjM6Vk_3gl0A3EqIDDfqXXk3DF70yy9q5xzAUR04she1tTErZOe3atpznm_JCRq06d3PdoA8g9Mo0ok4Zv5nTeoH8gkA701IOx6ItYbaMw5K34gXgVEUFjsmxzzw68xdnOlDTHP4ojpjUTxcR5M-8VGVwcdi3Lo7U6478-H1QRTvWtrS4rryFPabx9RVybUdJTTYtW21mEx_Y6jYn6vu-0tbBZoq9Dg2sNjhXzawJEbJek6nBzE2gEdaRlGFasa_6cpDRggktr"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-caption font-label-md text-primary bg-primary-container/10 px-2 py-1 rounded">Vinyasa Yoga</span>
+<span class="text-caption font-label-md text-secondary">18:30 - 19:45</span>
+</div>
+<h4 class="font-h3 text-h3 mt-xs">Studio Équilibre - Session Flow</h4>
+<p class="text-caption text-secondary flex items-center gap-1 mt-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span> 12 Rue de la Paix, Paris
+                                    </p>
+</div>
+<div class="mt-md flex justify-end gap-2">
+<button class="text-caption font-label-md text-secondary border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50">Modifier</button>
+<button class="text-caption font-label-md bg-primary-container text-on-primary-container px-3 py-1.5 rounded-lg">Détails</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Suggestion Slot -->
+<div class="relative pl-xl">
+<div class="absolute left-2.5 top-2 w-5 h-5 bg-emerald-100 border-2 border-white rounded-full z-10"></div>
+<div class="bg-dashed border-2 border-dashed border-slate-200 rounded-xl p-lg flex flex-col md:flex-row items-center justify-between gap-md group hover:border-primary transition-colors cursor-pointer">
+<div class="flex items-center gap-md">
+<div class="p-3 bg-slate-50 rounded-full group-hover:bg-primary-container/10 transition-colors">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary" data-icon="add_circle">add_circle</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Créneau disponible (12:00 - 14:00)</p>
+<p class="text-caption text-secondary">Suggestion : Pause déjeuner healthy à proximité</p>
+</div>
+</div>
+<div class="flex -space-x-3 overflow-hidden">
+<img alt="Restaurant 1" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Colorful healthy salad bowl with avocado, chickpeas and greens on a white table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6jMH0-VBcdvUbpLk34azijFs5WQ5mJMSABUukq5YUa-aXHXom7C1in0NHztYjtT-eaPASrnKFgHIBDWmPYfSlt-O7UYnIgp5G3dMbncCjGx4KWCaJqc74sH6nEz8-qBfL2HlVslzqGnIr5xB8MUSk77DncW7AyEZJayKhqyyNnwmDHrXjE7TavkjoGBPIdfGEFfJLYLsZq0nDDffVQkbksMrIYoHtZ05DrDULt7uy7r5_LDO6rIz1nLeJoOJvmzqIHVwb7deTRxKr"/>
+<img alt="Restaurant 2" class="inline-block h-8 w-8 rounded-full ring-2 ring-white" data-alt="Plate of fresh vegetables and hummus with pita bread" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKzc81pBfY33EJVhklSKfm7iTGrAjaE8LIDIklX0yfDaYgyEFn6KHd_V8Nyjh4pGXY3ZqqcI3dd017Cjir0r8MfETgVyy0q0LNNfT_bQEis6FBE1pzJBaI2u8ApyBy8t12-6Ulf4BuWzq5bHcgXd-ajK-iNnPXeHqo09aqzgrzgp0xaWBmNJ0F6NpinZx8ysDuRTnGD8ELa2fwb7PNYHhEkfgkE67EPoFz0zxoPHvcFRpNYZ2zTaZbyoNVMScNN0b33jis3qSgZDU"/>
+<div class="h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-400 ring-2 ring-white">+5</div>
+</div>
+</div>
+</div>
+<!-- Tomorrow Group -->
+<div class="relative pl-xl">
+<div class="absolute left-0 top-1 w-10 h-10 bg-white border-2 border-slate-200 rounded-full flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-slate-400" data-icon="event_note">event_note</span>
+</div>
+<div class="mb-md">
+<h3 class="font-h3 text-h3">Demain, 5 Nov</h3>
+</div>
+<!-- Card 2: Massage -->
+<div class="bg-white rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col md:flex-row mb-md border border-slate-50">
+<div class="md:w-48 h-32 md:h-auto overflow-hidden">
+<img alt="Spa Session" class="w-full h-full object-cover" data-alt="Luxury spa treatment room with warm ambient lighting, stacked white towels and essential oils on a wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0QrCguRXOqwiR3aqZzItRHn90LLu9V1j0-jEok5YCFOu9UUNVvUI9KT-Vozz55-eZxMunzsh8PBTP6o9knOIAs2CzRc_z-ZjAd4UWOi_5-kWK3nj1F430RnZyomwGnCgL-P8gIkiZ4DdqOW4Q5MOOdz4e2XXBQ2QBg46UxJnRLvzCHzdkl2W9EcNalXj3Ot23khCqF83fBf_PESBbUSZMry74sBFY2hRq_v1AJ6xjkIKrUsUg9UnkSxToXG2iTCgamoTb6pBd5Cio"/>
+</div>
+<div class="p-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<span class="text-caption font-label-md text-emerald-600 bg-emerald-50 px-2 py-1 rounded">Massage Suédois</span>
+<span class="text-caption font-label-md text-secondary">14:00 - 15:00</span>
+</div>
+<h4 class="font-h3 text-h3 mt-xs">Spa des Sens</h4>
+<p class="text-caption text-secondary flex items-center gap-1 mt-xs">
+<span class="material-symbols-outlined text-[14px]">location_on</span> 45 Avenue Montaigne, Paris
+                                    </p>
+</div>
+<div class="mt-md flex justify-end gap-2">
+<button class="text-caption font-label-md text-secondary border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50">Gérer</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- FAB -->
+<button class="fixed bottom-24 right-5 md:right-10 w-14 h-14 bg-[#2BB673] text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.2)] active:scale-90 transition-all z-40">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-lg flex justify-around items-center h-20 pb-safe px-4 border-t border-slate-100 dark:border-slate-800 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[11px] font-medium font-['Inter']">Explorateur</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="text-[11px] font-medium font-['Inter']">Favoris</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#2BB673] font-semibold tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="text-[11px] font-medium font-['Inter']">Agenda</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 tap-highlight-transparent transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="text-[11px] font-medium font-['Inter']">Profil</span>
+</a>
+</nav>
+<!-- Footer (Desktop Only) -->
+<footer class="hidden md:block w-full py-12 mt-24 border-t border-slate-200 dark:border-slate-800 bg-[#F5F5F5] dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-10 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-bold text-[#1E1E1E] dark:text-white font-h2">Zenith Wellness</span>
+<span class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400">© 2024 Zenith Wellness. Conciergerie Bien-être.</span>
+</div>
+<div class="flex gap-8">
+<a class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">À propos</a>
+<a class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Mentions légales</a>
+<a class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Devenir Partenaire</a>
+<a class="text-sm font-['Inter'] text-slate-500 dark:text-slate-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Aide</a>
+</div>
+</div>
+</footer>
+</body></html>

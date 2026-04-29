@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zenith Admin - National Performance Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {surface: "#f9f9f9", "tertiary-fixed": "#e2e2e2", "secondary-fixed": "#e5e2e1", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "primary-fixed": "#7afbb1", "inverse-surface": "#2f3131", "on-tertiary-container": "#353738", "tertiary-fixed-dim": "#c6c6c7", tertiary: "#5d5f5f", "surface-bright": "#f9f9f9", primary: "#006d40", "surface-container-low": "#f3f3f3", "surface-dim": "#dadada", "inverse-on-surface": "#f1f1f1", "surface-container-highest": "#e2e2e2", "on-tertiary-fixed-variant": "#454747", "on-surface": "#1a1c1c", "on-surface-variant": "#3d4a40", "primary-container": "#2bb673", "on-error-container": "#93000a", error: "#ba1a1a", outline: "#6d7a6f", "tertiary-container": "#9fa0a0", "secondary-fixed-dim": "#c8c6c5", "on-primary-fixed": "#002110", background: "#f9f9f9", "primary-fixed-dim": "#5cde97", "on-primary-container": "#004024", "inverse-primary": "#5cde97", "on-secondary-container": "#636262", "error-container": "#ffdad6", "on-secondary-fixed": "#1b1b1c", "on-error": "#ffffff", "surface-container-lowest": "#ffffff", "surface-container": "#eeeeee", "on-primary-fixed-variant": "#00522f", "outline-variant": "#bccabd", "on-tertiary-fixed": "#1a1c1c", "surface-variant": "#e2e2e2", "secondary-container": "#e2dfde", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#474746", "surface-tint": "#006d40", "surface-container-high": "#e8e8e8", "on-background": "#1a1c1c", secondary: "#5f5e5e"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {md: "16px", "margin-mobile": "20px", sm: "12px", xs: "4px", "margin-desktop": "40px", lg: "24px", gutter: "16px", base: "8px", xl: "32px"}, fontFamily: {caption: ["Inter"], "label-md": ["Inter"], h1: ["Inter"], "body-md": ["Inter"], "body-lg": ["Inter"], h3: ["Inter"], h2: ["Inter"], headline: ["Inter"], display: ["Inter"], body: ["Inter"], label: ["Inter"]}, fontSize: {caption: ["12px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "400"}], "label-md": ["14px", {lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "600"}], h1: ["32px", {lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "1.5", letterSpacing: "0", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "1.6", letterSpacing: "0", fontWeight: "400"}], h3: ["20px", {lineHeight: "1.4", letterSpacing: "0", fontWeight: "600"}], h2: ["24px", {lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600"}]}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+        .soft-card-shadow {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-gray-100 bg-white dark:bg-gray-950 flex flex-col p-6 gap-2 z-40 hidden md:flex">
+<div class="text-lg font-black text-[#2BB673] mb-8">Zenith Admin</div>
+<div class="flex items-center gap-3 px-4 py-2 mb-6">
+<img alt="Wellness Admin" class="w-10 h-10 rounded-full object-cover" data-alt="Professional portrait of a male executive in a sharp navy suit with soft office lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEUEe5w716qSGuPUzdT-G0CZJGpseDieEvrUnYB6YD0dlTve64z1Vgzbe3m9YRW2XESkurPxPYNoeB18NNzIAHbXiIJf9CmCOZybA_67_u8Psybhm-K-Fw6m4JiWvxkX-RihpPdlGQCF4IhvMzH2-cZ3fme7Yi6M1dafhA1woxV_Ds6iVs0caTCl2MVYLFuz7fsPOc3YPV-OIiJf68yRKiNmYsEIsyvc6A9H9e7gMbT1Dh23IHqufTa8oOR2128dwljDPeIZ9u0hKF"/>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface">Wellness Admin</span>
+<span class="text-[10px] text-tertiary uppercase tracking-tighter">Investor Relations</span>
+</div>
+</div>
+<nav class="flex flex-col gap-2 flex-grow">
+<a class="bg-[#2BB673]/10 text-[#2BB673] font-bold rounded-lg px-4 py-3 flex items-center gap-3 cursor-pointer" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="text-gray-500 hover:bg-gray-50 rounded-lg px-4 py-3 flex items-center gap-3 transition-all hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">monitoring</span> Analytics
+            </a>
+<a class="text-gray-500 hover:bg-gray-50 rounded-lg px-4 py-3 flex items-center gap-3 transition-all hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">handshake</span> Partners
+            </a>
+<a class="text-gray-500 hover:bg-gray-50 rounded-lg px-4 py-3 flex items-center gap-3 transition-all hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">account_balance</span> Investment Flow
+            </a>
+<a class="text-gray-500 hover:bg-gray-50 rounded-lg px-4 py-3 flex items-center gap-3 transition-all hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">present_to_all</span> Pitch Deck
+            </a>
+<a class="text-gray-500 hover:bg-gray-50 rounded-lg px-4 py-3 flex items-center gap-3 transition-all hover:translate-x-1 duration-200 cursor-pointer" href="#">
+<span class="material-symbols-outlined">settings_accessibility</span> Settings
+            </a>
+</nav>
+<div class="mt-auto flex flex-col gap-2 pt-6 border-t border-gray-100">
+<button class="bg-[#2BB673] text-white py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-sm">description</span> Generate Report
+            </button>
+<a class="text-gray-400 hover:text-[#2BB673] flex items-center gap-3 px-4 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined">help</span> Help Center
+            </a>
+<a class="text-gray-400 hover:text-error flex items-center gap-3 px-4 py-2 transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span> Logout
+            </a>
+</div>
+</aside>
+<!-- Top Navigation for Mobile/Desktop -->
+<header class="fixed top-0 right-0 left-0 md:left-64 h-16 bg-white/80 backdrop-blur-md border-b border-gray-100 z-30">
+<div class="flex items-center justify-between px-8 h-full">
+<div class="flex items-center gap-4">
+<h1 class="text-h2 font-h2 text-on-surface">National Performance</h1>
+<span class="px-3 py-1 bg-primary-container/10 text-primary font-bold text-caption rounded-full">LIVE TRACKING</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary-container w-64 text-sm" placeholder="Search data points..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-tertiary hover:bg-gray-100 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+<button class="p-2 text-tertiary hover:bg-gray-100 rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<button class="hidden sm:flex items-center gap-2 bg-on-surface text-white px-4 py-2 rounded-full font-label-md text-label-md">
+                        Invest Now
+                    </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-12 px-8 md:ml-64 min-h-screen">
+<!-- Key Metrics Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-xl">
+<!-- MRR Card -->
+<div class="bg-white p-lg rounded-xl soft-card-shadow border border-gray-50">
+<div class="flex justify-between items-start mb-sm">
+<span class="text-caption text-tertiary uppercase tracking-wider font-bold">Monthly Revenue (MRR)</span>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">payments</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-h1 font-h1 text-on-surface">€842.5k</span>
+<span class="text-primary font-bold flex items-center text-sm mb-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
+                    </span>
+</div>
+<div class="mt-md h-1 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%]"></div>
+</div>
+<p class="text-[10px] text-tertiary mt-2">Target: €1.0M by Q4</p>
+</div>
+<!-- Active Partners -->
+<div class="bg-white p-lg rounded-xl soft-card-shadow border border-gray-50">
+<div class="flex justify-between items-start mb-sm">
+<span class="text-caption text-tertiary uppercase tracking-wider font-bold">Active Partners</span>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">group</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-h1 font-h1 text-on-surface">1,204</span>
+<span class="text-primary font-bold flex items-center text-sm mb-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +48
+                    </span>
+</div>
+<div class="flex -space-x-2 mt-md">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Corporate headshot of a confident woman in a business environment with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6OKR3A8l-nx8T7pj0WqumcZXd8lDEKOHhF3dc1xAJtZdRBc9QWjEL7N6qgg8fiP9oVYf-mIfTAfrWlv4XleJTkQj1cWUBK0QS5p5lXWJQjL6goJNitLcQaydw0VmvZENEueNXhvuLMgXkq4Qil2jsYWGHYYkCa7-M3B3BZmlqYLzbUnj4DciZy6biRifKGXYloNSm-NBuYIcTnGRgNpelQotR2RJIQuO7moT3O_GZXv9ofW8_kU9X3xT3TkRv3FDv7p51i6LAZ6wi"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Portrait of a young male professional in a light grey suit with natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRnTFTHXBD7GXOOl0nvjfQ8cen_-lmBgOdr6nXplBym83LtLVsn9Q6waGhgTyesH2W0_7ak3-VQIyvJLeZcQKjxot7pR2NSeb828MKT7rwXRyVa3M6wEH7n-udGn1KWcbrbJ_C9QyELNGyuc1ssp20LAGtfuxDawID-5RTpW_FoFdbQDx70V0fxKwoN1E-ezSdmlqjYAMmAQlWzmcKS4WhUzzjYsJnBKrFAWhcNHt0h8Y_gI1Mi_MK_b-G5jNRy-EO97aMXNgl803S"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Close-up of a smiling man with glasses in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzyR9hhenFpvuhJfSVS9pXp0zkGYYZFKKSsRvhohBK734OBq1U2mo2KaTStj1Y98nfbNw5PqwabPSFdqPtAswAhAopkHmA-1SDZ5lfl87Q9BqRNykDBK3bfO6DYtbSYImqwfo8uuhMAJHKqOfmAz72zCflHf2Aq_6lBoUCTJq9ueUovvlyFb9C08I0y2Ac4qdZ2KOLVogg5DYCjJg9qYycsijYwmh5pK-nAeeBSyoBS2uu1B6yZRPoDHyf-B9MZFaxWdAfHp9Yaw0V"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface flex items-center justify-center text-[10px] font-bold">+21</div>
+</div>
+</div>
+<!-- AI Automations -->
+<div class="bg-white p-lg rounded-xl soft-card-shadow border border-gray-50 overflow-hidden relative">
+<div class="absolute -right-4 -top-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]">psychology</span>
+</div>
+<div class="flex justify-between items-start mb-sm">
+<span class="text-caption text-tertiary uppercase tracking-wider font-bold">AI Processes</span>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">bolt</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-h1 font-h1 text-on-surface">98.2%</span>
+<span class="text-primary font-bold flex items-center text-sm mb-1">Active</span>
+</div>
+<p class="text-[10px] text-tertiary mt-md uppercase tracking-tight font-medium">Auto-Scoring: Processing Lead #2934...</p>
+<div class="mt-2 flex gap-1">
+<div class="h-1 w-2 bg-primary animate-pulse"></div>
+<div class="h-1 w-2 bg-primary animate-pulse delay-75"></div>
+<div class="h-1 w-2 bg-primary animate-pulse delay-150"></div>
+</div>
+</div>
+<!-- Lead Score Avg -->
+<div class="bg-white p-lg rounded-xl soft-card-shadow border border-gray-50">
+<div class="flex justify-between items-start mb-sm">
+<span class="text-caption text-tertiary uppercase tracking-wider font-bold">Lead Score Avg</span>
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">star</span>
+</div>
+<div class="flex items-end gap-2">
+<span class="text-h1 font-h1 text-on-surface">84/100</span>
+</div>
+<div class="mt-md flex justify-between items-center text-caption">
+<span class="text-tertiary">Quality: High</span>
+<span class="text-primary font-bold">Optimized</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Main Content -->
+<div class="bento-grid">
+<!-- Map Section -->
+<div class="col-span-12 lg:col-span-8 bg-white rounded-xl soft-card-shadow border border-gray-50 p-lg flex flex-col h-[400px]">
+<div class="flex justify-between items-center mb-md">
+<div>
+<h3 class="text-h3 font-h3 text-on-surface">Partner Distribution</h3>
+<p class="text-caption text-tertiary">National coverage by top performing hubs</p>
+</div>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-gray-200 rounded-lg text-caption hover:bg-surface transition-colors">Heatmap</button>
+<button class="px-3 py-1 border border-gray-200 rounded-lg text-caption hover:bg-surface transition-colors">Markers</button>
+</div>
+</div>
+<div class="flex-grow rounded-lg overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover grayscale contrast-125 opacity-70" data-alt="Minimalist monochromatic map of France with glowing green data points in major cities like Montpellier and Beziers" data-location="France" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA59m1kjoo2pEpNuC6WhkqG9ex85QMmj_fqFGYmAbfm_A19GHtRmGAPeMfGDaSK_3-fY9YEcIvp7rZREcKM1_ndZPndr7RNWsyDZmDW1O6ZrvUmcDp69mxtjBmT8rtgz0_HDiM-Gsv2TsVngJrFEyOdrdazy4HgMqcZ7B5WzsTfUsSs2LZ6QPNivnDCdwef6hPZZtWUgnRdKeJyqhxOlhZiGO0ygHH75ZGukrTyiCc43WyOYNA9O5uxbqssWkXe3aXm6CYu6J_nCgj7"/>
+<div class="absolute top-10 left-[45%] w-4 h-4 bg-primary rounded-full animate-ping"></div>
+<div class="absolute top-10 left-[45%] w-3 h-3 bg-primary rounded-full shadow-lg border-2 border-white"></div>
+<!-- City Overlays -->
+<div class="absolute bottom-6 right-6 flex flex-col gap-2">
+<div class="bg-white/90 backdrop-blur-sm p-3 rounded-lg border border-gray-100 shadow-sm flex items-center gap-4">
+<span class="font-bold text-sm">Montpellier</span>
+<span class="text-primary font-black">342 Partners</span>
+</div>
+<div class="bg-white/90 backdrop-blur-sm p-3 rounded-lg border border-gray-100 shadow-sm flex items-center gap-4">
+<span class="font-bold text-sm">Béziers</span>
+<span class="text-primary font-black">189 Partners</span>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Control Center -->
+<div class="col-span-12 lg:col-span-4 bg-on-surface text-white rounded-xl soft-card-shadow p-lg flex flex-col overflow-hidden relative">
+<div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[180px]">auto_awesome</span>
+</div>
+<h3 class="text-h3 font-h3 mb-base">AI Control Center</h3>
+<p class="text-caption text-gray-400 mb-lg">Managing 24 active national automations</p>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center justify-between p-3 bg-white/10 rounded-lg border border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+<span class="text-sm font-medium">Lead Nurturing Bot</span>
+</div>
+<span class="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-fixed rounded uppercase">Active</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white/10 rounded-lg border border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-sm font-medium">Market Prediction v3</span>
+</div>
+<span class="text-[10px] px-2 py-0.5 bg-primary/20 text-primary-fixed rounded uppercase">Active</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-white/10 rounded-lg border border-white/5">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">shield</span>
+<span class="text-sm font-medium">Fraud Detection AI</span>
+</div>
+<span class="text-[10px] px-2 py-0.5 bg-gray-500/20 text-gray-400 rounded uppercase">Paused</span>
+</div>
+</div>
+<div class="mt-auto pt-lg">
+<div class="p-4 bg-primary rounded-xl flex items-center gap-4">
+<div class="flex-grow">
+<p class="text-[10px] text-on-primary/80 uppercase tracking-widest font-bold">Current Analysis</p>
+<p class="text-sm font-bold">Predicting 15% growth for Q3</p>
+</div>
+<span class="material-symbols-outlined text-white animate-spin">sync</span>
+</div>
+</div>
+</div>
+<!-- Leads List -->
+<div class="col-span-12 lg:col-span-12 bg-white rounded-xl soft-card-shadow border border-gray-50 p-lg">
+<div class="flex justify-between items-center mb-lg">
+<h3 class="text-h3 font-h3 text-on-surface">Recent Leads Generated</h3>
+<button class="text-primary font-bold text-sm flex items-center gap-1 hover:underline">
+                        View All Pipeline <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="border-b border-gray-100">
+<tr>
+<th class="pb-4 text-caption text-tertiary uppercase font-bold">Lead Contact</th>
+<th class="pb-4 text-caption text-tertiary uppercase font-bold">Location</th>
+<th class="pb-4 text-caption text-tertiary uppercase font-bold">Interest Level</th>
+<th class="pb-4 text-caption text-tertiary uppercase font-bold">AI Score</th>
+<th class="pb-4 text-caption text-tertiary uppercase font-bold">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-50">
+<tr class="group hover:bg-surface transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center font-bold text-primary text-xs">JP</div>
+<div>
+<p class="font-bold text-sm">Jean-Pierre Durant</p>
+<p class="text-[10px] text-tertiary">Real Estate Investor</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<span class="text-sm">Montpellier, 34</span>
+</td>
+<td class="py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full">HIGH CONVERSION</span>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-2">
+<span class="font-black text-on-surface">94</span>
+<div class="w-16 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%]"></div>
+</div>
+</div>
+</td>
+<td class="py-4">
+<button class="p-2 text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-surface transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center font-bold text-primary text-xs">MC</div>
+<div>
+<p class="font-bold text-sm">Marie Curie-Vasseur</p>
+<p class="text-[10px] text-tertiary">Health Tech Founder</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<span class="text-sm">Béziers, 34</span>
+</td>
+<td class="py-4">
+<span class="px-2 py-1 bg-surface-container text-tertiary text-[10px] font-bold rounded-full">NURTURING</span>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-2">
+<span class="font-black text-on-surface">62</span>
+<div class="w-16 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[62%]"></div>
+</div>
+</div>
+</td>
+<td class="py-4">
+<button class="p-2 text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+<tr class="group hover:bg-surface transition-colors">
+<td class="py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-surface flex items-center justify-center font-bold text-primary text-xs">LM</div>
+<div>
+<p class="font-bold text-sm">Lucas Martin</p>
+<p class="text-[10px] text-tertiary">Private Equity</p>
+</div>
+</div>
+</td>
+<td class="py-4">
+<span class="text-sm">Paris, 75</span>
+</td>
+<td class="py-4">
+<span class="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full">HOT LEAD</span>
+</td>
+<td class="py-4">
+<div class="flex items-center gap-2">
+<span class="font-black text-on-surface">88</span>
+<div class="w-16 h-1.5 bg-gray-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%]"></div>
+</div>
+</div>
+</td>
+<td class="py-4">
+<button class="p-2 text-tertiary hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for AI Query -->
+<button class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-[0px_8px_24px_rgba(43,182,115,0.4)] hover:scale-105 active:scale-95 transition-all z-50 group">
+<span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">bolt</span>
+</button>
+<!-- Footer -->
+<footer class="md:ml-64 w-full py-12 px-8 border-t border-gray-200 dark:border-gray-800 bg-[#F5F5F5] dark:bg-gray-900">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-caption text-caption uppercase tracking-widest text-gray-400">© 2024 Zenith Wellness Marketplace. Confidential Investor Portal.</p>
+<div class="flex gap-8">
+<a class="font-caption text-caption uppercase tracking-widest text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
+<a class="font-caption text-caption uppercase tracking-widest text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
+<a class="font-caption text-caption uppercase tracking-widest text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">SEC Compliance</a>
+<a class="font-caption text-caption uppercase tracking-widest text-gray-400 hover:text-[#2BB673] transition-colors underline-offset-4 hover:underline" href="#">Contact Relations</a>
+</div>
+</div>
+</footer>
+</body></html>
